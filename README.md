@@ -1,3 +1,9 @@
+## 这是 Bulma 的中文翻译。可以通过以下链接访问
+https://lqzhgood.github.io/bulma-docs-cn
+
+欢迎提交 Issues 改进。
+
+
 ## Building the documentation
 
 The documentation HTML is produced with the Ruby-based `jekyll` tool.
