@@ -20,7 +20,7 @@ You can now fix a [navbar](/documentation/components/navbar/#fixed-navbar) to th
 As a added **bonus**, the bottom navbar required a new **dropup** feature which has also been implemented!
 
 <figure>
-  <a href="/documentation/components/navbar/#fixed-navbar">
+  <a href="{{ site.url }}/documentation/components/navbar/#fixed-navbar">
     <img src="/images/blog/dropup.png" alt="Navbar dropup" width="660" height="239">
   </a>
 </figure>
