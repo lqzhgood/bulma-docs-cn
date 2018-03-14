@@ -8,7 +8,7 @@ env:           "production"
 
 markdown:      kramdown
 permalink:     pretty
-url:           https://bulma.io
+url:            https://lqzhgood.github.io/bulma-docs-cn
 exclude:       ['icons', 'node_modules', 'templates', '.babelrc', 'bulma-docs.sass', 'docker-compose.yml', 'package.json', 'yarn.lock']
 
 # Variables
