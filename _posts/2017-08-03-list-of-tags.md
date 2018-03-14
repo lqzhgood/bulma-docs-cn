@@ -13,7 +13,7 @@ A tag rarely comes on its own though, so Bulma now supports [list of tags](/docu
 
 <figure>
   <a href="{{ site.url }}/documentation/elements/tag/#list-of-tags">
-    <img src="/images/blog/list-of-tags.png" alt="List of tags in CSS" width="660" height="401">
+    <img src="{{ site.url }}/images/blog/list-of-tags.png" alt="List of tags in CSS" width="660" height="401">
   </a>
 </figure>
 

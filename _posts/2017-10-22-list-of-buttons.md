@@ -11,7 +11,7 @@ Similarly to the [list of tags](/2017/08/03/list-of-tags/) launched a few months
 
 <figure>
   <a href="{{ site.url }}/documentation/elements/button/#list-of-buttons">
-    <img src="/images/blog/list-of-buttons.png" alt="List of buttons in CSS" width="660" height="550">
+    <img src="{{ site.url }}/images/blog/list-of-buttons.png" alt="List of buttons in CSS" width="660" height="550">
   </a>
 </figure>
 
