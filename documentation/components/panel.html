@@ -1,0 +1,122 @@
+---
+title: Panel
+layout: documentation
+doc-tab: components
+doc-subtab: panel
+---
+
+{% capture panel_example %}
+<nav class="panel">
+  <p class="panel-heading">
+    repositories
+  </p>
+  <div class="panel-block">
+    <p class="control has-icons-left">
+      <input class="input is-small" type="text" placeholder="search">
+      <span class="icon is-small is-left">
+        <i class="fas fa-search"></i>
+      </span>
+    </p>
+  </div>
+  <p class="panel-tabs">
+    <a class="is-active">all</a>
+    <a>public</a>
+    <a>private</a>
+    <a>sources</a>
+    <a>forks</a>
+  </p>
+  <a class="panel-block is-active">
+    <span class="panel-icon">
+      <i class="fas fa-book"></i>
+    </span>
+    bulma
+  </a>
+  <a class="panel-block">
+    <span class="panel-icon">
+      <i class="fas fa-book"></i>
+    </span>
+    marksheet
+  </a>
+  <a class="panel-block">
+    <span class="panel-icon">
+      <i class="fas fa-book"></i>
+    </span>
+    minireset.css
+  </a>
+  <a class="panel-block">
+    <span class="panel-icon">
+      <i class="fas fa-book"></i>
+    </span>
+    jgthms.github.io
+  </a>
+  <a class="panel-block">
+    <span class="panel-icon">
+      <i class="fas fa-code-branch"></i>
+    </span>
+    daniellowtw/infboard
+  </a>
+  <a class="panel-block">
+    <span class="panel-icon">
+      <i class="fas fa-code-branch"></i>
+    </span>
+    mojs
+  </a>
+  <label class="panel-block">
+    <input type="checkbox">
+    remember me
+  </label>
+  <div class="panel-block">
+    <button class="button is-link is-outlined is-fullwidth">
+      reset all filters
+    </button>
+  </div>
+</nav>
+{% endcapture %}
+
+{% include subnav-components.html %}
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">Panel</h1>
+    <h2 class="subtitle">一个可组合的 <strong>面板</strong>，用于控制紧凑的内容</h2>
+    {%
+      include meta.html
+      colors=false
+      sizes=false
+      variables=true
+    %}
+
+    <hr>
+
+    <div class="content">
+      <p>
+        <code>panel</code> 有这几种类型的容器：
+      </p>
+      <ul>
+        <li>
+          <code>panel-heading</code> 第一个子元素
+        </li>
+        <li>
+          <code>panel-tabs</code> 用于导航
+        </li>
+        <li>
+          <code>panel-block</code> 可以包含其他元素，例如：
+          <ul>
+            <li><code>control</code></li>
+            <li><code>input</code></li>
+            <li><code>button</code></li>
+            <li><code>panel-icon</code></li>
+          </ul>
+        </li>
+      </ul>
+      <p>
+        <code>panel-block</code> 可以是一个锚标签 <code>&lt;a&gt;</code> 或包含一个复选框 <code>&lt;label&gt;</code> 的标签。
+      </p>
+    </div>
+
+    {% include snippet.html content=panel_example size="one-third" %}
+
+    {% include variables.html type='component' %}
+
+  </div>
+</section>

@@ -1,0 +1,121 @@
+---
+title: 变量
+layout: documentation
+doc-tab: overview
+doc-subtab: variables
+---
+
+{% include subnav-overview.html %}
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">变量</h1>
+    <h2 class="subtitle">轻松 <strong>定制</strong> Bulma 来符合您的设计</h2>
+
+    <hr>
+
+    {% assign initial_variables = site.data.variables.utilities.initial-variables %}
+    {% assign initial_vars      = initial_variables.vars %}
+    {% assign derived_variables = site.data.variables.utilities.derived-variables %}
+    {% assign derived_vars      = derived_variables.vars %}
+
+    <div class="content">
+      <p>Bulma 有 <strong>两个</strong> 变量文件，分为 <strong>4</strong> 个部分:</p>
+      <ol>
+        <li>
+          <strong>初始变量</strong>: 你可以通过修改变量的 <strong>字面量</strong> 来定义, 例如:
+          <ul>
+            <li><strong>颜色</strong>: <code>{{ initial_vars.blue.name }}: {{ initial_vars.blue.value }}</code></li>
+            <li><strong>字体大小</strong>: <code>{{ initial_vars.size-1.name }}: {{ initial_vars.size-1.value }}</code></li>
+            <li><strong>尺寸</strong>: <code>{{ initial_vars.gap.name }}: {{ initial_vars.gap.value }}</code></li>
+            <li><strong>其他变量</strong>: <code>{{ initial_vars.easing.name }}: {{ initial_vars.easing.value }}</code> or <code>{{ initial_vars.radius-large.name }}: {{ initial_vars.radius-large.value }}</code></li>
+          </ul>
+        </li>
+        <li>
+          <strong>派生变量</strong> 变量的值是通过前一个文件中的值 <strong>计算</strong> 出来的. 例如:
+          <ul>
+            <li>
+              <strong>主色</strong> 来自初始变量:
+              <ul>
+                <li><code>{{ derived_vars.primary.name }}: {{ derived_vars.primary.value }}</code></li>
+                <li><code>{{ derived_vars.link.name }}: {{ derived_vars.link.value }}</code></li>
+                <li><code>{{ derived_vars.info.name }}: {{ derived_vars.info.value }}</code></li>
+                <li><code>{{ derived_vars.success.name }}: {{ derived_vars.success.value }}</code></li>
+                <li><code>{{ derived_vars.warning.name }}: {{ derived_vars.warning.value }}</code></li>
+                <li><code>{{ derived_vars.danger.name }}: {{ derived_vars.danger.value }}</code></li>
+                <li><code>{{ derived_vars.dark.name }}: {{ derived_vars.dark.value }}</code></li>
+                <li><code>{{ derived_vars.text.name }}: {{ derived_vars.text.value }}</code></li>
+              </ul>
+            </li>
+            <li><code>{{ derived_vars.background.name }}: {{ derived_vars.background.value }}</code>:一般的背景颜色</li>
+            <li><code>{{ derived_vars.link.name }}: {{ derived_vars.link.value }}</code>:来自主色</li>
+            <li><code>{{ derived_vars.family-primary.name }}: {{ derived_vars.family-primary.value }}</code>: 主要字体是 sans-serif 无衬线字体系列</li>
+            <li>
+              他们是已定义变量的 <strong>列表集合</strong>:
+              <ul>
+                <li><code>{{ derived_vars.colors.name }}: {{ derived_vars.colors.value }}</code></li>
+                <li><code>{{ derived_vars.shades.name }}: {{ derived_vars.shades.value }}</code></li>
+                <li><code>{{ derived_vars.sizes.name }}: {{ derived_vars.sizes.value }}</code></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ol>
+      <p>
+        要 <strong>覆盖</strong> 这些变量，只需要在导入 Bulma <strong>之前</strong> 设置即可。
+      </p>
+    </div>
+
+    {% include anchor.html name="Initial variables | 初始变量" %}
+
+    <div class="content">
+      <p>
+        这些是具有 <strong>字面量</strong> 的<a href="{{ initial_variables.file_url }}" target="_blank">变量值</a>.
+      </p>
+    </div>
+
+    <table class="table is-bordered is-striped">
+      <tbody>
+      {% for variable_hash in initial_vars %}
+        {% assign variable    = variable_hash[1] %}
+        {% assign starts_with = variable.value | slice: 0, 3 %}
+        <tr>
+          <td>
+            <code style="white-space: nowrap;">{{ variable.name }}</code>
+          </td>
+          <td>
+            {% if starts_with == 'hsl' %}
+              <span class="bd-color" style="background: {{ variable.value }};"></span>
+            {% endif %}
+            <code>{{ variable.value }}</code>
+          </td>
+        </tr>
+      {% endfor %}
+      <tbody>
+    </table>
+
+    {% capture custom_message %}
+        这些是通过 <strong>引用</strong> 其他变量求值的 <a href="{{ derived_variables.file_url }}" target="_blank">变量</a>
+    {% endcapture %}
+    {%
+      include variables.html
+        anchor_name    = 'Derived variables | 派生变量'
+        data           = derived_variables
+        custom_message = custom_message
+        table_class    = 'is-bordered is-striped'
+    %}
+
+    {% capture custom_message %}
+     您可以使用以下<a href="{{ site.data.variables.base.generic.file_url }}" target="_blank">通用变量</a> 用于常规 <strong>定制</strong>。 只需要在导入 Bulma <em>之前</em> 简单的设置一个或多个这些变量值。 <a href="{{ site.url }}/documentation/overview/customize/">学习如何开始</a>.
+    {% endcapture %}
+    {%
+      include variables.html
+        anchor_name    = 'Generic variables | 通用变量'
+        tab            = 'base'
+        subtab         = 'generic'
+        custom_message = custom_message
+        table_class    = 'is-bordered is-striped'
+    %}
+
+  </div>
+</section>

@@ -1,0 +1,238 @@
+---
+title: Pagination | 分页
+layout: documentation
+doc-tab: components
+doc-subtab: pagination
+---
+
+{% capture pagination_example %}
+<nav class="pagination" role="navigation" aria-label="pagination">
+  <a class="pagination-previous">Previous</a>
+  <a class="pagination-next">Next page</a>
+  <ul class="pagination-list">
+    <li>
+      <a class="pagination-link" aria-label="Goto page 1">1</a>
+    </li>
+    <li>
+      <span class="pagination-ellipsis">&hellip;</span>
+    </li>
+    <li>
+      <a class="pagination-link" aria-label="Goto page 45">45</a>
+    </li>
+    <li>
+      <a class="pagination-link is-current" aria-label="Page 46" aria-current="page">46</a>
+    </li>
+    <li>
+      <a class="pagination-link" aria-label="Goto page 47">47</a>
+    </li>
+    <li>
+      <span class="pagination-ellipsis">&hellip;</span>
+    </li>
+    <li>
+      <a class="pagination-link" aria-label="Goto page 86">86</a>
+    </li>
+  </ul>
+</nav>
+{% endcapture %}
+
+{% capture pagination_options_example %}
+<nav class="pagination" role="navigation" aria-label="pagination">
+  <a class="pagination-previous" title="This is the first page" disabled>Previous</a>
+  <a class="pagination-next">Next page</a>
+  <ul class="pagination-list">
+    <li>
+      <a class="pagination-link is-current" aria-label="Page 1" aria-current="page">1</a>
+    </li>
+    <li>
+      <a class="pagination-link" aria-label="Goto page 2">2</a>
+    </li>
+    <li>
+      <a class="pagination-link" aria-label="Goto page 3">3</a>
+    </li>
+  </ul>
+</nav>
+{% endcapture %}
+
+{% capture pagination_centered_example %}
+<nav class="pagination is-centered" role="navigation" aria-label="pagination">
+  <a class="pagination-previous">Previous</a>
+  <a class="pagination-next">Next page</a>
+  <ul class="pagination-list">
+    <li><a class="pagination-link" aria-label="Goto page 1">1</a></li>
+    <li><span class="pagination-ellipsis">&hellip;</span></li>
+    <li><a class="pagination-link" aria-label="Goto page 45">45</a></li>
+    <li><a class="pagination-link is-current" aria-label="Page 46" aria-current="page">46</a></li>
+    <li><a class="pagination-link" aria-label="Goto page 47">47</a></li>
+    <li><span class="pagination-ellipsis">&hellip;</span></li>
+    <li><a class="pagination-link" aria-label="Goto page 86">86</a></li>
+  </ul>
+</nav>
+{% endcapture %}
+
+{% capture pagination_right_example %}
+<nav class="pagination is-right" role="navigation" aria-label="pagination">
+  <a class="pagination-previous">Previous</a>
+  <a class="pagination-next">Next page</a>
+  <ul class="pagination-list">
+    <li><a class="pagination-link" aria-label="Goto page 1">1</a></li>
+    <li><span class="pagination-ellipsis">&hellip;</span></li>
+    <li><a class="pagination-link" aria-label="Goto page 45">45</a></li>
+    <li><a class="pagination-link is-current" aria-label="Page 46" aria-current="page">46</a></li>
+    <li><a class="pagination-link" aria-label="Goto page 47">47</a></li>
+    <li><span class="pagination-ellipsis">&hellip;</span></li>
+    <li><a class="pagination-link" aria-label="Goto page 86">86</a></li>
+  </ul>
+</nav>
+{% endcapture %}
+
+{% capture pagination_rounded_example %}
+<nav class="pagination is-rounded" role="navigation" aria-label="pagination">
+  <a class="pagination-previous">Previous</a>
+  <a class="pagination-next">Next page</a>
+  <ul class="pagination-list">
+    <li><a class="pagination-link" aria-label="Goto page 1">1</a></li>
+    <li><span class="pagination-ellipsis">&hellip;</span></li>
+    <li><a class="pagination-link" aria-label="Goto page 45">45</a></li>
+    <li><a class="pagination-link is-current" aria-label="Page 46" aria-current="page">46</a></li>
+    <li><a class="pagination-link" aria-label="Goto page 47">47</a></li>
+    <li><span class="pagination-ellipsis">&hellip;</span></li>
+    <li><a class="pagination-link" aria-label="Goto page 86">86</a></li>
+  </ul>
+</nav>
+{% endcapture %}
+
+{% capture pagination_small_example %}
+<nav class="pagination is-small" role="navigation" aria-label="pagination">
+  <a class="pagination-previous">Previous</a>
+  <a class="pagination-next">Next page</a>
+  <ul class="pagination-list">
+    <li><a class="pagination-link" aria-label="Goto page 1">1</a></li>
+    <li><span class="pagination-ellipsis">&hellip;</span></li>
+    <li><a class="pagination-link" aria-label="Goto page 45">45</a></li>
+    <li><a class="pagination-link is-current" aria-label="Page 46" aria-current="page">46</a></li>
+    <li><a class="pagination-link" aria-label="Goto page 47">47</a></li>
+    <li><span class="pagination-ellipsis">&hellip;</span></li>
+    <li><a class="pagination-link" aria-label="Goto page 86">86</a></li>
+  </ul>
+</nav>
+{% endcapture %}
+
+{% capture pagination_medium_example %}
+<nav class="pagination is-medium" role="navigation" aria-label="pagination">
+  <a class="pagination-previous">Previous</a>
+  <a class="pagination-next">Next page</a>
+  <ul class="pagination-list">
+    <li><a class="pagination-link" aria-label="Goto page 1">1</a></li>
+    <li><span class="pagination-ellipsis">&hellip;</span></li>
+    <li><a class="pagination-link" aria-label="Goto page 45">45</a></li>
+    <li><a class="pagination-link is-current" aria-label="Page 46" aria-current="page">46</a></li>
+    <li><a class="pagination-link" aria-label="Goto page 47">47</a></li>
+    <li><span class="pagination-ellipsis">&hellip;</span></li>
+    <li><a class="pagination-link" aria-label="Goto page 86">86</a></li>
+  </ul>
+</nav>
+{% endcapture %}
+
+{% capture pagination_large_example %}
+<nav class="pagination is-large" role="navigation" aria-label="pagination">
+  <a class="pagination-previous">Previous</a>
+  <a class="pagination-next">Next page</a>
+  <ul class="pagination-list">
+    <li><a class="pagination-link" aria-label="Goto page 1">1</a></li>
+    <li><span class="pagination-ellipsis">&hellip;</span></li>
+    <li><a class="pagination-link" aria-label="Goto page 45">45</a></li>
+    <li><a class="pagination-link is-current" aria-label="Page 46" aria-current="page">46</a></li>
+    <li><a class="pagination-link" aria-label="Goto page 47">47</a></li>
+    <li><span class="pagination-ellipsis">&hellip;</span></li>
+    <li><a class="pagination-link" aria-label="Goto page 86">86</a></li>
+  </ul>
+</nav>
+{% endcapture %}
+
+{% include subnav-components.html %}
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">Pagination | 分页</h1>
+    <h2 class="subtitle">一个响应式、好用、灵活的 <strong>分页</strong></h2>
+    {%
+      include meta.html
+      colors=false
+      sizes=true
+      variables=true
+    %}
+
+    <hr>
+
+    <div class="content">
+      <p>
+        分页组件由以下几个元素组成：
+      </p>
+      <ul>
+        <li>
+          <code>pagination-previous</code> 和 <code>pagination-next</code> 用于导航
+        </li>
+        <li>
+          <code>pagination-list</code> 其中显示页面项目：
+          <ul>
+            <li>
+              <code>pagination-link</code> 页码
+            </li>
+            <li>
+              <code>pagination-ellipsis</code> 范围分隔符
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <p>
+        所有元素都是可选的，因此您可以根据需要编写分页。
+      </p>
+    </div>
+
+    {% include snippet.html content=pagination_example horizontal=true more=true %}
+
+    <div class="content">
+      <p>
+          您可以禁用某些链接，如果它们不活动，或更改活动的页码。
+      </p>
+    </div>
+
+    {% include snippet.html content=pagination_options_example horizontal=true more=true %}
+
+    <div class="content">
+      <p>
+          在 <strong>tablet</strong> 上默认列表位于左侧，上一页/下一页 按钮位于右侧，但是您可以通过使用 <code>is-centered</code> 和 <code>is-right</code> 来修改这些元素的 <strong>顺序</strong>。
+      </p>
+    </div>
+
+    {% include snippet.html content=pagination_centered_example horizontal=true more=true %}
+
+    {% include snippet.html content=pagination_right_example horizontal=true more=true %}
+
+    {% include anchor.html name="Styles | 样式" %}
+
+    {% include elements/new-tag.html version="0.6.2" %}
+
+    <p class="content">
+        您可以通过添加 <code>is-rounded</code> 修饰符来拥有一个圆角的分页项
+    </p>
+
+    {% include snippet.html content=pagination_rounded_example horizontal=true more=true %}
+
+    {% include anchor.html name="Sizes | 尺寸" %}
+
+    <p class="content">
+        分页组件有 <strong>3 种额外的尺寸</strong>。 <br>
+        您只需要在 <code>pagination</code> 组件上添加 <code>is-small</code>, <code>is-medium</code>, 或 <code>is-large</code> <strong>修饰符</strong>。
+    </p>
+
+    {% include snippet.html content=pagination_small_example horizontal=true more=true %}
+
+    {% include snippet.html content=pagination_medium_example horizontal=true more=true %}
+
+    {% include snippet.html content=pagination_large_example horizontal=true more=true %}
+
+    {% include variables.html type='component' %}
+
+  </div>
+</section>

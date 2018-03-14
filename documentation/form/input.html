@@ -1,0 +1,526 @@
+---
+title: Input
+layout: documentation
+doc-tab: form
+doc-subtab: input
+variables_keys:
+- input-color
+- input-background-color
+- input-border-color
+- input-shadow
+- input-hover-color
+- input-hover-border-color
+- input-focus-color
+- input-focus-border-color
+- input-focus-box-shadow-size
+- input-focus-box-shadow-color
+- input-disabled-color
+- input-disabled-background-color
+- input-disabled-border-color
+- input-arrow
+- input-icon-color
+- input-icon-active-color
+- input-radius
+---
+
+{% capture input_example %}
+<input class="input" type="text" placeholder="Text input">
+{% endcapture %}
+
+{% capture colors_example %}
+<div class="field">
+  <div class="control">
+    <input class="input is-primary" type="text" placeholder="Primary input">
+  </div>
+</div>
+<div class="field">
+  <div class="control">
+    <input class="input is-info" type="text" placeholder="Info input">
+  </div>
+</div>
+<div class="field">
+  <div class="control">
+    <input class="input is-success" type="text" placeholder="Success input">
+  </div>
+</div>
+<div class="field">
+  <div class="control">
+    <input class="input is-warning" type="text" placeholder="Warning input">
+  </div>
+</div>
+<div class="field">
+  <div class="control">
+    <input class="input is-danger" type="text" placeholder="Danger input">
+  </div>
+</div>
+{% endcapture %}
+
+{% capture sizes_example %}
+<div class="field">
+  <div class="control">
+    <input class="input is-small" type="text" placeholder="Small input">
+  </div>
+</div>
+<div class="field">
+  <div class="control">
+    <input class="input" type="text" placeholder="Normal input">
+  </div>
+</div>
+<div class="field">
+  <div class="control">
+    <input class="input is-medium" type="text" placeholder="Medium input">
+  </div>
+</div>
+<div class="field">
+  <div class="control">
+    <input class="input is-large" type="text" placeholder="Large input">
+  </div>
+</div>
+{% endcapture %}
+
+{% capture rounded_example %}
+<input class="input is-rounded" type="text" placeholder="Rounded input">
+{% endcapture %}
+
+{% capture normal_example %}
+<div class="control">
+  <input class="input" type="text" placeholder="Normal input">
+</div>
+{% endcapture %}
+
+{% capture hover_example %}
+<div class="control">
+  <input class="input is-hovered" type="text" placeholder="Hovered input">
+</div>
+{% endcapture %}
+
+{% capture focus_example %}
+<div class="control">
+  <input class="input is-focused" type="text" placeholder="Focused input">
+</div>
+{% endcapture %}
+
+{% capture loading_example %}
+<div class="control is-loading">
+  <input class="input" type="text" placeholder="Loading input">
+</div>
+{% endcapture %}
+
+{% capture loading_sizes_example %}
+<div class="field">
+  <div class="control is-small is-loading">
+    <input class="input is-small" type="text" placeholder="Small loading input">
+  </div>
+</div>
+<div class="field">
+  <div class="control is-loading">
+    <input class="input" type="text" placeholder="Normal loading input">
+  </div>
+</div>
+<div class="field">
+  <div class="control is-medium is-loading">
+    <input class="input is-medium" type="text" placeholder="Medium loading input">
+  </div>
+</div>
+<div class="field">
+  <div class="control is-large is-loading">
+    <input class="input is-large" type="text" placeholder="Large loading input">
+  </div>
+</div>
+{% endcapture %}
+
+{% capture disabled_example %}
+<div class="control">
+  <input class="input" type="text" placeholder="Disabled input" disabled>
+</div>
+{% endcapture %}
+
+{% capture readonly_example %}
+<div class="control">
+  <input class="input" type="text" value="This text is readonly" readonly>
+</div>
+{% endcapture %}
+
+{% capture static_example %}
+<div class="field is-horizontal">
+  <div class="field-label is-normal">
+    <label class="label">From</label>
+  </div>
+  <div class="field-body">
+    <div class="field">
+      <p class="control">
+        <input class="input is-static" type="email" value="me@example.com" readonly>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="field is-horizontal">
+  <div class="field-label is-normal">
+    <label class="label">To</label>
+  </div>
+  <div class="field-body">
+    <div class="field">
+      <p class="control">
+        <input class="input" type="email" placeholder="Recipient email">
+      </p>
+    </div>
+  </div>
+</div>
+{% endcapture %}
+
+{% capture icons_example %}
+<div class="field">
+  <p class="control has-icons-left has-icons-right">
+    <input class="input" type="email" placeholder="Email">
+    <span class="icon is-small is-left">
+      <i class="fas fa-envelope"></i>
+    </span>
+    <span class="icon is-small is-right">
+      <i class="fas fa-check"></i>
+    </span>
+  </p>
+</div>
+<div class="field">
+  <p class="control has-icons-left">
+    <input class="input" type="password" placeholder="Password">
+    <span class="icon is-small is-left">
+      <i class="fas fa-lock"></i>
+    </span>
+  </p>
+</div>
+{% endcapture %}
+
+{% capture has_icons_small_example %}
+<div class="control has-icons-left has-icons-right">
+  <input class="input is-small" type="email" placeholder="Email">
+  <span class="icon is-small is-left">
+    <i class="fas fa-envelope"></i>
+  </span>
+  <span class="icon is-small is-right">
+    <i class="fas fa-check"></i>
+  </span>
+</div>
+{% endcapture %}
+
+{% capture has_icons_normal_example %}
+<div class="control has-icons-left has-icons-right">
+  <input class="input" type="email" placeholder="Email">
+  <span class="icon is-small is-left">
+    <i class="fas fa-envelope"></i>
+  </span>
+  <span class="icon is-small is-right">
+    <i class="fas fa-check"></i>
+  </span>
+</div>
+{% endcapture %}
+
+{% capture has_icons_medium_example %}
+<div class="control has-icons-left has-icons-right">
+  <input class="input is-medium" type="email" placeholder="Email">
+  <span class="icon is-left">
+    <i class="fas fa-envelope"></i>
+  </span>
+  <span class="icon is-right">
+    <i class="fas fa-check"></i>
+  </span>
+</div>
+{% endcapture %}
+
+{% capture has_icons_large_example %}
+<div class="control has-icons-left has-icons-right">
+  <input class="input is-large" type="email" placeholder="Email">
+  <span class="icon is-medium is-left">
+    <i class="fas fa-envelope"></i>
+  </span>
+  <span class="icon is-medium is-right">
+    <i class="fas fa-check"></i>
+  </span>
+</div>
+{% endcapture %}
+
+{% include subnav-form.html %}
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">Input</h1>
+    <h2 class="subtitle">
+      <strong>文本输入框</strong> 的变化
+    </h2>
+    {%
+      include meta.html
+      colors=true
+      sizes=true
+      variables=true
+    %}
+
+    <hr>
+
+    <div class="content">
+      <p>支持以下 <strong>修饰符</strong>：</p>
+      <ul>
+        <li>the <strong><a href="#colors">color</a></strong></li>
+        <li>the <strong><a href="#sizes">size</a></strong></li>
+        <li>the <strong><a href="#states">state</a></strong></li>
+      </ul>
+      <p>支持以下 <a href="http://htmlreference.io/element/input/" target="_blank">类型属性</a>：</p>
+      <ul>
+        <li><code>type="text"</code></li>
+        <li><code>type="password"</code></li>
+        <li><code>type="email"</code></li>
+        <li><code>type="tel"</code></li>
+      </ul>
+    </div>
+
+    <div class="columns">
+      <div class="column is-half">
+        {{input_example}}
+      </div>
+      <div class="column is-half highlight-full">
+        {% highlight html %}{{input_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    {% include anchor.html name="Colors | 颜色" %}
+
+    <div class="columns">
+      <div class="column is-half">
+        {{colors_example}}
+      </div>
+      <div class="column is-half highlight-full">
+        {% highlight html %}{{colors_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    {% include anchor.html name="Sizes | 尺寸" %}
+
+    <div class="columns">
+      <div class="column is-half">
+        {{sizes_example}}
+      </div>
+      <div class="column is-half">
+        {% highlight html %}{{sizes_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    {% include anchor.html name="Styles | 样式" %}
+
+    {% include elements/new-tag.html version="0.6.2" %}
+
+    <div class="columns">
+      <div class="column is-half">
+        {{ rounded_example }}
+      </div>
+      <div class="column is-half">
+        {% highlight html %}{{ rounded_example }}{% endhighlight %}
+      </div>
+    </div>
+
+    {% include anchor.html name="States | 状态" %}
+
+    <h4 class="subtitle">Normal</h4>
+    <div class="columns">
+      <div class="column is-half">
+        {{normal_example}}
+      </div>
+      <div class="column is-half">
+        {% highlight html %}{{normal_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    <h4 class="subtitle">Hover</h4>
+    <div class="columns">
+      <div class="column is-half">
+        {{hover_example}}
+      </div>
+      <div class="column is-half">
+        {% highlight html %}{{hover_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    <h4 class="subtitle">Focus</h4>
+    <div class="columns">
+      <div class="column is-half">
+        {{focus_example}}
+      </div>
+      <div class="column is-half">
+        {% highlight html %}{{focus_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    <h4 class="subtitle">Loading</h4>
+    <div class="columns">
+      <div class="column is-half">
+        {{loading_example}}
+      </div>
+      <div class="column is-half">
+        {% highlight html %}{{loading_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column is-half">
+        <div class="content">
+          <p>
+            您可以通过在 <code>control</code> 容器上添加 <code>is-small</code>, <code>is-medium</code> 或 <code>is-large</code> 修饰符来调整大小。
+          </p>
+        </div>
+        {{loading_sizes_example}}
+      </div>
+      <div class="column is-half">
+        {% highlight html %}{{loading_sizes_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    <h4 class="subtitle">Disabled</h4>
+    <div class="columns">
+      <div class="column is-half">
+        {{disabled_example}}
+      </div>
+      <div class="column is-half">
+        {% highlight html %}{{disabled_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    <h4 class="subtitle">只读的静态文本</h4>
+    <p style="margin-bottom: 0.5rem;">
+      <span class="tag is-success">New!</span>
+      <span class="tag is-info">0.5.3</span>
+    </p>
+    <div class="content">
+      <p>
+        如果您使用 <code>readonly</code> HTML属性，输入框将看起来可以正常输入，但是是不可编辑的，并且没有阴影。
+      </p>
+    </div>
+    <div class="columns">
+      <div class="column is-half">
+        {{ readonly_example }}
+      </div>
+      <div class="column is-half">
+        {% highlight html %}{{ readonly_example }}{% endhighlight %}
+      </div>
+    </div>
+
+    <div class="content">
+      <p>
+        如果您 <em>再</em> 添加 <code>is-static</code> 修饰符，他将删除 background, border, shadow, and 水平 padding，同时保持 <strong>垂直间距</strong>，因此您可以在任何情况下让内容轻松对齐，例如水平表单。
+      </p>
+    </div>
+
+    <div class="bd-example">
+      {{ static_example }}
+    </div>
+    {% highlight html %}{{ static_example }}{% endhighlight %}
+
+    <!-- Font Awesome Icons -->
+    {% include anchor.html name="With Font Awesome icons | 使用 Font Awesome 图标" %}
+
+    <div class="content">
+      <p>你可以在控件上使用 <strong>2 种修饰符</strong> :</p>
+      <ul>
+        <li>
+          <code>has-icons-left</code>
+        </li>
+        <li>
+          和/或 <code>has-icons-right</code>
+        </li>
+      </ul>
+      <p>你还需要在 <strong>图标</strong> 上添加一个修饰符：</p>
+      <ul>
+        <li>
+          当 <code>has-icons-left</code> 使用时，需要添加 <code>icon is-left</code>
+        </li>
+        <li>
+         当 <code>has-icons-right</code> 使用时，需要添加 <code>icon is-right</code>
+        </li>
+      </ul>
+      <p>图标容器的大小将由 <strong>input</strong> 大小决定.</p>
+    </div>
+    <div class="columns">
+      <div class="column is-half">
+        {{icons_example}}
+      </div>
+      <div class="column is-half">
+        {% highlight html %}{{icons_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column is-half">
+        <div class="content">
+          <p>
+              如果控件包含图标，Bulma 将确保图标保持 <strong>居中</strong>，无论是 input <em>或</em> 图标。
+          </p>
+        </div>
+        {{has_icons_small_example}}
+      </div>
+      <div class="column is-half">
+        {% highlight html %}{{has_icons_small_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column is-half">
+        {{has_icons_normal_example}}
+      </div>
+      <div class="column is-half">
+        {% highlight html %}{{has_icons_normal_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column is-half">
+        {{has_icons_medium_example}}
+      </div>
+      <div class="column is-half">
+        {% highlight html %}{{has_icons_medium_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column is-half">
+        {{has_icons_large_example}}
+      </div>
+      <div class="column is-half">
+        {% highlight html %}{{has_icons_large_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    {% include anchor.html name="Variables | 变量" %}
+
+    <div class="content">
+      <p>
+        您可以使用 <a href="{{ site.github | append: '/blob/master/sass/elements/form.sass#L1,L23' }}" target="_blank">这些变量</a> 来 <strong>自定义</strong> 元素，只需要在导入 Bulma <em>之前</em> 设置这些变量。 <a href="{{ site.url }}/documentation/overview/customize/">学习如何开始</a>。
+      </p>
+    </div>
+
+    <table class="table is-bordered">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Default value</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <th>Name</th>
+          <th>Default value</th>
+        </tr>
+      </tfoot>
+      <tbody>
+        {% for key in page.variables_keys %}
+          {% assign variable = site.data.variables.elements.form.vars[key] %}
+          <tr>
+            <td>
+              <code>{{ variable.name }}</code>
+            </td>
+            <td>
+              <code>{{ variable.value }}</code>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+  </div>
+</section>

@@ -1,0 +1,92 @@
+---
+title: Delete
+layout: documentation
+doc-tab: elements
+doc-subtab: delete
+---
+
+{% capture cross_example %}
+<a class="delete"></a>
+{% endcapture %}
+
+{% capture cross_sizes_example %}
+<a class="delete is-small"></a>
+<a class="delete"></a>
+<a class="delete is-medium"></a>
+<a class="delete is-large"></a>
+{% endcapture %}
+
+{% capture cross_elements_example %}
+<div class="block">
+  <span class="tag is-success">
+    Hello World
+    <button class="delete is-small"></button>
+  </span>
+</div>
+
+<div class="notification is-danger">
+  <button class="delete"></button>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit lorem ipsum dolor sit amet, consectetur adipiscing elit
+</div>
+
+<article class="message is-info">
+  <div class="message-header">
+    Info
+    <button class="delete"></button>
+  </div>
+  <div class="message-body">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque risus mi, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum felis venenatis efficitur. Aenean ac eleifend lacus, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+  </div>
+</article>
+{% endcapture %}
+
+{% include subnav-elements.html %}
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">Delete</h1>
+    <h2 class="subtitle">
+      一个多功能的 <strong>删除</strong> 叉叉
+    </h2>
+    {%
+      include meta.html
+      colors=false
+      sizes=true
+      variables=false
+    %}
+
+    <hr>
+
+    <div class="content">
+      <p>
+         <code>.delete</code> 是一个独立元素，可以在不通的上下文中使用。
+      </p>
+      <p>
+        就其本身而言，它是一个带有叉叉的圆圈:
+      </p>
+    </div>
+
+    {% include snippet.html content=cross_example %}
+
+    {% include anchor.html name="Sizes | 尺寸" %}
+
+    <div class="content">
+      <p>
+         它有 <strong>4 种尺寸</strong>:
+      </p>
+    </div>
+
+    {% include snippet.html content=cross_sizes_example %}
+
+    {% include anchor.html name="Combinations | 组合" %}
+
+    <div class="content">
+      <p>
+        Bulma 将他用于 <a href="/documentation/elements/tag/">tags</a>、 <a href="/documentation/elements/notification/">notifications</a> 和 <a href="/documentation/components/message/">messages</a>:
+      </p>
+    </div>
+
+    {% include snippet.html content=cross_elements_example %}
+
+  </div>
+</section>

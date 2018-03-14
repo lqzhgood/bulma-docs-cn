@@ -1,0 +1,204 @@
+---
+title: Breadcrumb
+layout: documentation
+doc-tab: components
+doc-subtab: breadcrumb
+---
+
+{% include subnav-components.html %}
+
+{% capture breadcrumb_example %}
+<nav class="breadcrumb" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="#">Bulma</a></li>
+    <li><a href="#">Documentation</a></li>
+    <li><a href="#">Components</a></li>
+    <li class="is-active"><a href="#" aria-current="page">Breadcrumb</a></li>
+  </ul>
+</nav>
+{% endcapture %}
+
+{% capture breadcrumb_centered_example %}
+<nav class="breadcrumb is-centered" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="#">Bulma</a></li>
+    <li><a href="#">Documentation</a></li>
+    <li><a href="#">Components</a></li>
+    <li class="is-active"><a href="#" aria-current="page">Breadcrumb</a></li>
+  </ul>
+</nav>
+{% endcapture %}
+
+{% capture breadcrumb_right_example %}
+<nav class="breadcrumb is-right" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="#">Bulma</a></li>
+    <li><a href="#">Documentation</a></li>
+    <li><a href="#">Components</a></li>
+    <li class="is-active"><a href="#" aria-current="page">Breadcrumb</a></li>
+  </ul>
+</nav>
+{% endcapture %}
+
+{% capture breadcrumb_icons_example %}
+<nav class="breadcrumb" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="#"><span class="icon is-small"><i class="fas fa-home"></i></span><span>Bulma</span></a></li>
+    <li><a href="#"><span class="icon is-small"><i class="fas fa-book"></i></span><span>Documentation</span></a></li>
+    <li><a href="#"><span class="icon is-small"><i class="fas fa-puzzle-piece"></i></span><span>Components</span></a></li>
+    <li class="is-active"><a href="#" aria-current="page"><span class="icon is-small"><i class="fas fa-thumbs-up" aria-hidden="true"></i></span><span>Breadcrumb</span></a></li>
+  </ul>
+</nav>
+{% endcapture %}
+
+{% capture breadcrumb_small_example %}
+<nav class="breadcrumb is-small" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="#">Bulma</a></li>
+    <li><a href="#">Documentation</a></li>
+    <li><a href="#">Components</a></li>
+    <li class="is-active"><a href="#" aria-current="page">Breadcrumb</a></li>
+  </ul>
+</nav>
+{% endcapture %}
+
+{% capture breadcrumb_medium_example %}
+<nav class="breadcrumb is-medium" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="#">Bulma</a></li>
+    <li><a href="#">Documentation</a></li>
+    <li><a href="#">Components</a></li>
+    <li class="is-active"><a href="#" aria-current="page">Breadcrumb</a></li>
+  </ul>
+</nav>
+{% endcapture %}
+
+{% capture breadcrumb_large_example %}
+<nav class="breadcrumb is-large" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="#">Bulma</a></li>
+    <li><a href="#">Documentation</a></li>
+    <li><a href="#">Components</a></li>
+    <li class="is-active"><a href="#" aria-current="page">Breadcrumb</a></li>
+  </ul>
+</nav>
+{% endcapture %}
+
+{% capture breadcrumb_arrow_example %}
+<nav class="breadcrumb has-arrow-separator" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="#">Bulma</a></li>
+    <li><a href="#">Documentation</a></li>
+    <li><a href="#">Components</a></li>
+    <li class="is-active"><a href="#" aria-current="page">Breadcrumb</a></li>
+  </ul>
+</nav>
+{% endcapture %}
+
+{% capture breadcrumb_bullet_example %}
+<nav class="breadcrumb has-bullet-separator" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="#">Bulma</a></li>
+    <li><a href="#">Documentation</a></li>
+    <li><a href="#">Components</a></li>
+    <li class="is-active"><a href="#" aria-current="page">Breadcrumb</a></li>
+  </ul>
+</nav>
+{% endcapture %}
+
+{% capture breadcrumb_dot_example %}
+<nav class="breadcrumb has-dot-separator" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="#">Bulma</a></li>
+    <li><a href="#">Documentation</a></li>
+    <li><a href="#">Components</a></li>
+    <li class="is-active"><a href="#" aria-current="page">Breadcrumb</a></li>
+  </ul>
+</nav>
+{% endcapture %}
+
+{% capture breadcrumb_succeeds_example %}
+<nav class="breadcrumb has-succeeds-separator" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="#">Bulma</a></li>
+    <li><a href="#">Documentation</a></li>
+    <li><a href="#">Components</a></li>
+    <li class="is-active"><a href="#" aria-current="page">Breadcrumb</a></li>
+  </ul>
+</nav>
+{% endcapture %}
+
+<section class="section">
+  <div class="container">
+
+    <h1 class="title">面包屑导航</h1>
+    <h2 class="subtitle">
+        一个简单的 <strong>面包屑</strong> 组件用来改善您的导航体验。
+    </h2>
+    {%
+      include meta.html
+      since="0.4.3"
+      variables=true
+      colors=false
+      sizes=true
+    %}
+
+    <hr>
+
+    <div class="content">
+        <p><strong>面包屑</strong> 组件只需要一个 <code>.breadcrumb</code> 容器和一个 <code>ul</code> 列表。</p>
+      <p>会自动在 <code>li</code> 标签的 <code>::before</code> 伪元素上添加分隔符。</p>
+      <p>您可以在 <code>li</code> 标签上使用 <code>is-active</code> 修饰符来显示当前页面，它将禁用链接。</p>
+    </div>
+
+    <hr>
+    {% include snippet.html content=breadcrumb_example horizontal=true clipped=true %}
+
+    {% include anchor.html name="Alignment | 对齐" %}
+
+    <div class="content">
+      <p>作为替选方案,可以在 <code>.breadcrumb</code> 容器上使用 <code>is-centered</code> 和 <code>is-right</code> 修饰符。</p>
+    </div>
+
+    {% include snippet.html content=breadcrumb_centered_example horizontal=true clipped=true %}
+
+    {% include snippet.html content=breadcrumb_right_example horizontal=true clipped=true %}
+
+    {% include anchor.html name="Icons | 图标" %}
+
+    <div class="content">
+      <p>您可以使用任意 <a href="https://fontawesome.com/" target="_blank">Font Awesome</a> <strong>图标</strong>.</p>
+    </div>
+
+    {% include snippet.html content=breadcrumb_icons_example horizontal=true clipped=true %}
+
+    {% include anchor.html name="Alternative separators | 替换分隔符" %}
+
+    <div class="content">
+      <p>您可以选择 <strong>4 种分隔符</strong>: <code>has-arrow-separator</code> <code>has-bullet-separator</code> <code>has-dot-separator</code> and <code>has-succeeds-separator</code>.</p>
+    </div>
+
+    {% include snippet.html content=breadcrumb_arrow_example horizontal=true clipped=true %}
+
+    {% include snippet.html content=breadcrumb_bullet_example horizontal=true clipped=true %}
+
+    {% include snippet.html content=breadcrumb_dot_example horizontal=true clipped=true %}
+
+    {% include snippet.html content=breadcrumb_succeeds_example horizontal=true clipped=true %}
+
+    {% include anchor.html name="Sizes | 尺寸" %}
+
+    <div class="content">
+      <p>您可以选择 <strong>3 种尺寸</strong>: <code>is-small</code> <code>is-medium</code> and <code>is-large</code>.</p>
+    </div>
+
+    {% include snippet.html content=breadcrumb_small_example horizontal=true clipped=true %}
+
+    {% include snippet.html content=breadcrumb_medium_example horizontal=true clipped=true %}
+
+    {% include snippet.html content=breadcrumb_large_example horizontal=true clipped=true %}
+
+    {% include variables.html type='component' %}
+
+  </div>
+</section>

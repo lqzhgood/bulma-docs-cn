@@ -1,0 +1,52 @@
+.bd-banner
+  align-items: center
+  display: flex
+  justify-content: center
+  overflow: hidden
+  padding: 1rem
+  position: relative
+  strong
+    color: currentColor
+  .tag
+    margin-right: 0.5em
+  &.is-patreon
+    background-color: $patreon-blue
+    color: $white
+  &.is-fortyfour
+    background-color: $fortyfour
+    color: $white
+  .button
+    transform-origin: center
+    transition-duration: $speed
+    transition-property: transform
+  &:hover
+    .button
+      transform: scale(1.1)
+
+.bd-banner-background
+  +overlay
+  background-image: url("/images/fortyfour-background.jpg")
+  background-position: center center
+  background-size: cover
+  opacity: 0.5
+
+.bd-banner-text
+  line-height: 1.25
+  margin-right: 0.5rem
+  position: relative
+
+.bd-banner-button
+  display: inline-block
+  flex-shrink: 0
+  height: 34px
+  position: relative
+  width: 145px
+  img
+    max-height: 100%
+
+.hero.bd-is-patreon
+  background-color: $patreon
+
++from(480px)
+  .bd-banner-text
+    margin-right: 1rem

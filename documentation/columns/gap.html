@@ -1,0 +1,225 @@
+---
+title: 列间距
+layout: documentation
+doc-tab: columns
+doc-subtab: gap
+---
+
+{% capture columns_default_gap %}
+<div class="columns">
+  <div class="column">
+    <p class="bd-notification is-info">
+      默认间距
+    </p>
+  </div>
+  <div class="column">
+    <p class="bd-notification is-success">
+      默认间距
+    </p>
+  </div>
+  <div class="column">
+    <p class="bd-notification is-warning">
+      默认间距
+    </p>
+  </div>
+  <div class="column">
+    <p class="bd-notification is-danger">
+      默认间距
+    </p>
+  </div>
+</div>
+{% endcapture %}
+
+{% capture columns_gapless %}
+<div class="columns is-gapless">
+  <div class="column">
+    无间距
+  </div>
+  <div class="column">
+    无间距
+  </div>
+  <div class="column">
+    无间距
+  </div>
+  <div class="column">
+    无间距
+  </div>
+</div>
+{% endcapture %}
+
+{% capture columns_gapless_multiline %}
+<div class="columns is-gapless is-multiline is-mobile">
+  <div class="column is-one-quarter">
+    is-one-quarter
+  </div>
+  <div class="column is-one-quarter">
+    is-one-quarter
+  </div>
+  <div class="column is-one-quarter">
+    is-one-quarter
+  </div>
+  <div class="column is-one-quarter">
+    is-one-quarter
+  </div>
+  <div class="column is-half">
+    is-half
+  </div>
+  <div class="column is-one-quarter">
+    is-one-quarter
+  </div>
+  <div class="column is-one-quarter">
+    is-one-quarter
+  </div>
+  <div class="column is-one-quarter">
+    is-one-quarter
+  </div>
+  <div class="column">
+    Auto
+  </div>
+</div>
+{% endcapture %}
+
+{% include subnav-columns.html %}
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">列间距</h1>
+    <h2 class="subtitle">
+      在 <strong>列</strong> 之间自定义间距
+    </h2>
+
+    {% include anchor.html name="Default gap" %}
+
+    <div class="content">
+      <p>
+          每一列都有和 <strong>变量</strong> <code>$column-gap</code> 相等的间距，默认值是 <code>0.75rem</code> 。
+        <br>
+        由于列的两边都有间距，相邻两列的间距是  <code>$column-gap</code> 值的两倍,默认值是 <code>1.5rem</code> 。
+      </p>
+    </div>
+
+    {{ columns_default_gap }}
+
+    {% include anchor.html name="Gapless" %}
+
+    <div class="content">
+      <p>
+        如果想要删除列间距，请在 <code>columns</code> 容器上添加 <code>is-gapless</code> 修饰符：
+      </p>
+    </div>
+
+    <div class="columns is-gapless">
+      <div class="column">
+        <p class="bd-notification is-info">第一列</p>
+      </div>
+      <div class="column">
+        <p class="bd-notification is-success">第二列</p>
+      </div>
+      <div class="column">
+        <p class="bd-notification is-warning">第三列</p>
+      </div>
+      <div class="column">
+        <p class="bd-notification is-danger">第四列</p>
+      </div>
+    </div>
+
+    <div class="highlight-full">
+      {% highlight html %}{{ columns_gapless }}{% endhighlight %}
+    </div>
+
+    <div class="content">
+      <p>You can combine it with the <code>is-multiline</code> modifier:</p>
+      <p>你可以和 <code>is-multiline</code> 修饰符结合使用:</p>
+    </div>
+
+    <div class="columns is-multiline is-mobile is-gapless">
+      <div class="column is-one-quarter">
+        <p class="bd-notification is-info"><code>is-one-quarter</code></p>
+      </div>
+      <div class="column is-one-quarter">
+        <p class="bd-notification is-success"><code>is-one-quarter</code></p>
+      </div>
+      <div class="column is-one-quarter">
+        <p class="bd-notification is-warning"><code>is-one-quarter</code></p>
+      </div>
+      <div class="column is-one-quarter">
+        <p class="bd-notification is-danger"><code>is-one-quarter</code></p>
+      </div>
+      <div class="column is-half">
+        <p class="bd-notification is-info"><code>is-half</code></p>
+      </div>
+      <div class="column is-one-quarter">
+        <p class="bd-notification is-success"><code>is-one-quarter</code></p>
+      </div>
+      <div class="column is-one-quarter">
+        <p class="bd-notification is-warning"><code>is-one-quarter</code></p>
+      </div>
+      <div class="column is-one-quarter">
+        <p class="bd-notification is-danger"><code>is-one-quarter</code></p>
+      </div>
+      <div class="column">
+        <p class="bd-notification is-info">Auto</p>
+      </div>
+    </div>
+
+    <div class="highlight-full">
+      {% highlight html %}{{ columns_gapless_multiline }}{% endhighlight %}
+    </div>
+
+    {% include anchor.html name="Variable gap" %}
+
+    <div class="field is-grouped is-grouped-multiline">
+      <div class="control">
+        <div class="tags">
+          <span class="tag is-warning">实验性</span>
+        </div>
+      </div>
+
+      <div class="control">
+        <div class="tags has-addons">
+          <span class="tag">New</span>
+          <span class="tag is-info">0.5.2</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <p>
+          你可以在  <code>.columns</code> 容器上添加这 9 种修饰符来<strong>自定义间隔</strong>。
+      </p>
+      <ul>
+        <li>
+          <code>is-0</code> 将移除间距 (类似于 <code>is-gapless</code>)
+        </li>
+        <li>
+          <code>is-3</code> 这是 <strong>默认值</strong>, 相当于 <code>0.75rem</code>
+        </li>
+        <li>
+          <code>is-8</code> 是最大间距，相当于 <code>2rem</code>
+        </li>
+      </ul>
+      <p>
+        此外, 应该在 <code>.columns</code> 容器上添加 <code>.is-variable</code> 修饰符。
+      </p>
+    </div>
+
+    {% include klmn.html %}
+
+    <div class="message is-warning">
+      <div class="message-body">
+        <p>
+        此特性仅在支持 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables">CSS 变量</a> 的浏览器上可用:
+        </p>
+      </div>
+    </div>
+
+    <div class="message is-info">
+      <div class="message-body">
+        <p>
+            如果你的 Sass 编译器不支持 CSS 变量，你可以通过设置 <code>$variable-columns</code> 为 <code>false</code>，来 <strong>关闭这个特性</strong>。
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>

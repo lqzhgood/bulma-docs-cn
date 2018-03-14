@@ -1,0 +1,474 @@
+---
+title: Select
+layout: documentation
+doc-tab: form
+doc-subtab: select
+---
+
+{% capture select_example %}
+<div class="select">
+  <select>
+    <option>Select dropdown</option>
+    <option>With options</option>
+  </select>
+</div>
+{% endcapture %}
+
+{% capture select_multiple_example %}
+<div class="select is-multiple">
+  <select multiple size="8">
+    <option value="Argentina">Argentina</option>
+    <option value="Bolivia">Bolivia</option>
+    <option value="Brazil">Brazil</option>
+    <option value="Chile">Chile</option>
+    <option value="Colombia">Colombia</option>
+    <option value="Ecuador">Ecuador</option>
+    <option value="Guyana">Guyana</option>
+    <option value="Paraguay">Paraguay</option>
+    <option value="Peru">Peru</option>
+    <option value="Suriname">Suriname</option>
+    <option value="Uruguay">Uruguay</option>
+    <option value="Venezuela">Venezuela</option>
+  </select>
+</div>
+{% endcapture %}
+
+{% capture colors_example %}
+<div class="field">
+  <div class="control">
+    <div class="select is-primary">
+      <select>
+        <option>Select dropdown</option>
+        <option>With options</option>
+      </select>
+    </div>
+  </div>
+</div>
+<div class="field">
+  <div class="control">
+    <div class="select is-info">
+      <select>
+        <option>Select dropdown</option>
+        <option>With options</option>
+      </select>
+    </div>
+  </div>
+</div>
+<div class="field">
+  <div class="control">
+    <div class="select is-success">
+      <select>
+        <option>Select dropdown</option>
+        <option>With options</option>
+      </select>
+    </div>
+  </div>
+</div>
+<div class="field">
+  <div class="control">
+    <div class="select is-warning">
+      <select>
+        <option>Select dropdown</option>
+        <option>With options</option>
+      </select>
+    </div>
+  </div>
+</div>
+<div class="field">
+  <div class="control">
+    <div class="select is-danger">
+      <select>
+        <option>Select dropdown</option>
+        <option>With options</option>
+      </select>
+    </div>
+  </div>
+</div>
+{% endcapture %}
+
+{% capture rounded_example %}
+<div class="select is-rounded">
+  <select>
+    <option>Rounded dropdown</option>
+    <option>With options</option>
+  </select>
+</div>
+{% endcapture %}
+
+{% capture sizes_example %}
+<div class="field">
+  <div class="control">
+    <div class="select is-small">
+      <select>
+        <option>Select dropdown</option>
+        <option>With options</option>
+      </select>
+    </div>
+  </div>
+</div>
+<div class="field">
+  <div class="control">
+    <div class="select">
+      <select>
+        <option>Select dropdown</option>
+        <option>With options</option>
+      </select>
+    </div>
+  </div>
+</div>
+<div class="field">
+  <div class="control">
+    <div class="select is-medium">
+      <select>
+        <option>Select dropdown</option>
+        <option>With options</option>
+      </select>
+    </div>
+  </div>
+</div>
+<div class="field">
+  <div class="control">
+    <div class="select is-large">
+      <select>
+        <option>Select dropdown</option>
+        <option>With options</option>
+      </select>
+    </div>
+  </div>
+</div>
+{% endcapture %}
+
+{% capture normal_example %}
+<div class="control">
+  <div class="select">
+    <select>
+      <option>Select dropdown</option>
+      <option>With options</option>
+    </select>
+  </div>
+</div>
+{% endcapture %}
+
+{% capture hover_example %}
+<div class="control">
+  <div class="select">
+    <select class="is-hovered">
+      <option>Select dropdown</option>
+      <option>With options</option>
+    </select>
+  </div>
+</div>
+{% endcapture %}
+
+{% capture focus_example %}
+<div class="control">
+  <div class="select">
+    <select class="is-focused">
+      <option>Select dropdown</option>
+      <option>With options</option>
+    </select>
+  </div>
+</div>
+{% endcapture %}
+
+{% capture loading_example %}
+<div class="control">
+  <div class="select is-loading">
+    <select>
+      <option>Select dropdown</option>
+      <option>With options</option>
+    </select>
+  </div>
+</div>
+{% endcapture %}
+
+{% capture disabled_example %}
+<div class="control">
+  <div class="select is-disabled">
+    <select disabled>
+      <option>Select dropdown</option>
+      <option>With options</option>
+    </select>
+  </div>
+</div>
+{% endcapture %}
+
+{% capture icons_example %}
+<div class="field">
+  <div class="control has-icons-left">
+    <div class="select">
+      <select>
+        <option selected>Country</option>
+        <option>Select dropdown</option>
+        <option>With options</option>
+      </select>
+    </div>
+    <div class="icon is-small is-left">
+      <i class="fas fa-globe"></i>
+    </div>
+  </div>
+</div>
+{% endcapture %}
+
+{% capture has_icons_small_example %}
+<div class="control has-icons-left">
+  <div class="select is-small">
+    <select>
+      <option selected>Country</option>
+      <option>Select dropdown</option>
+      <option>With options</option>
+    </select>
+  </div>
+  <span class="icon is-small is-left">
+    <i class="fas fa-globe"></i>
+  </span>
+</div>
+{% endcapture %}
+
+{% capture has_icons_normal_example %}
+<div class="control has-icons-left">
+  <div class="select">
+    <select>
+      <option selected>Country</option>
+      <option>Select dropdown</option>
+      <option>With options</option>
+    </select>
+  </div>
+  <span class="icon is-left">
+    <i class="fas fa-globe"></i>
+  </span>
+</div>
+{% endcapture %}
+
+{% capture has_icons_medium_example %}
+<div class="control has-icons-left">
+  <div class="select is-medium">
+    <select>
+      <option selected>Country</option>
+      <option>Select dropdown</option>
+      <option>With options</option>
+    </select>
+  </div>
+  <span class="icon is-medium is-left">
+    <i class="fas fa-globe"></i>
+  </span>
+</div>
+{% endcapture %}
+
+{% capture has_icons_large_example %}
+<div class="control has-icons-left">
+  <div class="select is-large">
+    <select>
+      <option selected>Country</option>
+      <option>Select dropdown</option>
+      <option>With options</option>
+    </select>
+  </div>
+  <span class="icon is-large is-left">
+    <i class="fas fa-globe"></i>
+  </span>
+</div>
+{% endcapture %}
+
+{% include subnav-form.html %}
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">Select</h1>
+    <h2 class="subtitle">
+        依照浏览器内置的 <strong>下拉选择框</strong> 设计。
+    </h2>
+    {%
+      include meta.html
+      colors=true
+      sizes=true
+      variables=false
+    %}
+
+    <hr>
+
+    <div class="content">
+      <p>支持以下 <strong>修饰符</strong>：</p>
+      <ul>
+        <li>the <strong><a href="#select-color">color</a></strong></li>
+        <li>the <strong><a href="#select-size">size</a></strong></li>
+        <li>the <strong><a href="#select-state">state</a></strong></li>
+      </ul>
+    </div>
+
+    <div class="columns">
+      <div class="column is-half">
+        {{select_example}}
+      </div>
+      <div class="column is-half highlight-full">
+        {% highlight html %}{{select_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    <hr>
+
+    <h3 class="title">多选</h3>
+
+    <div class="columns">
+      <div class="column is-half">
+        <div class="content">
+          <p>
+              你可以结合 <code>is-multiple</code> 修饰符及 <code>multiple</code> HTML属性来创建一个 <strong>多选</strong> 下拉框。
+          </p>
+        </div>
+        {{select_multiple_example}}
+      </div>
+      <div class="column is-half highlight-full">
+        {% highlight html %}{{select_multiple_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    {% include anchor.html name="Colors | 颜色" %}
+
+    <div class="columns">
+      <div class="column is-half">
+        {{colors_example}}
+      </div>
+      <div class="column is-half highlight-full">
+        {% highlight html %}{{colors_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    {% include anchor.html name="Styles | 样式" %}
+
+    {% include elements/new-tag.html version="0.6.2" %}
+
+    <div class="columns">
+      <div class="column is-half">
+        {{ rounded_example }}
+      </div>
+      <div class="column is-half">
+        {% highlight html %}{{ rounded_example }}{% endhighlight %}
+      </div>
+    </div>
+
+    {% include anchor.html name="Sizes | 尺寸" %}
+
+    <div class="columns">
+      <div class="column is-half">
+        {{sizes_example}}
+      </div>
+      <div class="column is-half">
+        {% highlight html %}{{sizes_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    <hr>
+
+    <h3 id="select-state" class="title">状态</h3>
+    <h4 class="subtitle">Normal</h4>
+    <div class="columns">
+      <div class="column is-half">
+        {{normal_example}}
+      </div>
+      <div class="column is-half">
+        {% highlight html %}{{normal_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    <h4 class="subtitle">Hover</h4>
+    <div class="columns">
+      <div class="column is-half">
+        {{hover_example}}
+      </div>
+      <div class="column is-half">
+        {% highlight html %}{{hover_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    <h4 class="subtitle">Focus</h4>
+    <div class="columns">
+      <div class="column is-half">
+        {{focus_example}}
+      </div>
+      <div class="column is-half">
+        {% highlight html %}{{focus_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    <h4 class="subtitle">Loading</h4>
+    <div class="columns">
+      <div class="column is-half">
+        {{loading_example}}
+      </div>
+      <div class="column is-half">
+        {% highlight html %}{{loading_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    <!-- Font Awesome Icons -->
+    <hr>
+
+    <h3 id="input-with-icons" class="title">使用图标</h3>
+    <div class="content">
+      <p>您可以在空间上添加 <strong>修饰符</strong>:</p>
+      <ul>
+        <li>
+          <code>has-icons-left</code>
+        </li>
+      </ul>
+      <p>你还需要在 <strong>图标</strong> 上添加一个修饰符：</p>
+      <ul>
+        <li>
+          当 <code>has-icons-left</code> 使用时，添加<code>icon is-left</code>
+        </li>
+      </ul>
+      <p>图标容器的大小将由 <strong>select</strong> 的大小决定。</p>
+    </div>
+    <div class="columns">
+      <div class="column is-half">
+        {{icons_example}}
+      </div>
+      <div class="column is-half">
+        {% highlight html %}{{icons_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column is-half">
+        <div class="content">
+          <p>
+              如果控件包含图标，Bulma 将确保图标保持 <strong>居中</strong>，无论是输入框还是图标。
+          </p>
+        </div>
+        {{has_icons_small_example}}
+      </div>
+      <div class="column is-half">
+        {% highlight html %}{{has_icons_small_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column is-half">
+        {{has_icons_normal_example}}
+      </div>
+      <div class="column is-half">
+        {% highlight html %}{{has_icons_normal_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column is-half">
+        {{has_icons_medium_example}}
+      </div>
+      <div class="column is-half">
+        {% highlight html %}{{has_icons_medium_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column is-half">
+        {{has_icons_large_example}}
+      </div>
+      <div class="column is-half">
+        {% highlight html %}{{has_icons_large_example}}{% endhighlight %}
+      </div>
+    </div>
+
+  </div>
+</section>

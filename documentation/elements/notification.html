@@ -1,0 +1,54 @@
+---
+title: Notification
+layout: documentation
+doc-tab: elements
+doc-subtab: notification
+---
+
+{% capture notification %}
+<div class="notification">
+  <button class="delete"></button>
+  Lorem ipsum dolor sit amet, consectetur
+  adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
+  consectetur adipiscing elit
+</div>
+{% endcapture %}
+
+{% capture notification_colors %}
+{% for color in site.data.colors.justColors %}
+<div class="notification is-{{ color }}">
+  <button class="delete"></button>
+  Primar lorem ipsum dolor sit amet, consectetur
+  adipiscing elit lorem ipsum dolor. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Sit amet,
+  consectetur adipiscing elit
+</div>
+{% endfor %}
+{% endcapture %}
+
+{% include subnav-elements.html %}
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">Notifications</h1>
+    <h2 class="subtitle">
+        大块 <strong>通知</strong> 块，用于提醒用户一些事情。
+    </h2>
+    {%
+      include meta.html
+      colors=true
+      sizes=false
+      variables=true
+    %}
+
+    <hr>
+
+    {% include snippet.html content=notification %}
+
+    {% include anchor.html name="Colors | 颜色" %}
+
+    {% include snippet.html content=notification_colors %}
+
+    {% include variables.html type='element' %}
+
+  </div>
+</section>

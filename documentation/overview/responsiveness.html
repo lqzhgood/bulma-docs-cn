@@ -1,0 +1,225 @@
+---
+title: 响应性
+layout: documentation
+doc-tab: overview
+doc-subtab: responsiveness
+variables_keys:
+- gap
+- tablet
+- desktop
+- widescreen
+- fullhd
+---
+
+{% include subnav-overview.html %}
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">响应性</h1>
+    <h2 class="subtitle">Bulma 是一个 <strong>移动优先</strong> 的框架</h2>
+
+    {% include anchor.html name="Vertical by default | 默认垂直显示" %}
+
+    <div class="content">
+      <p>
+        Bulma 中每个元素都是 <strong>移动优先</strong> 的，并针对 <strong>垂直阅读</strong> 进行优化, 并且默认为在移动设备上显示:
+      </p>
+      <ul>
+        <li><code>columns</code> 是垂直堆放的</li>
+        <li><code>level</code> 组件的子元素将垂直堆放</li>
+        <li><code>nav</code> 导航菜单将会隐藏</li>
+      </ul>
+      <p>例如, 您可以通过添加 <code>is-mobile</code> 修饰符，强制让<code>columns</code> 或 <code>nav</code> 变为 <strong>水平</strong> 布局。</p>
+    </div>
+
+    {% include anchor.html name="Breakpoints | 断点" %}
+
+    {% assign variables_file_url = "/blob/master/sass/utilities/initial-variables.sass#L46,L57" | prepend: site.github %}
+    {% assign mixins_file_url = "/blob/master/sass/utilities/mixins.sass#L182,L226" | prepend: site.github %}
+
+    <div class="content">
+      <p>Bulma 有 <a href="{{ variables_file_url }}" target="_blank">5 个断点</a>:</p>
+      <ul>
+        {% for breakpoint_hash in site.data.breakpoints %}
+          {% assign breakpoint = breakpoint_hash[1] %}
+          <li>{% if breakpoint.id == 'fullhd' %}<span class="tag is-success">New!</span> {% endif %}<code>{{ breakpoint.id }}</code>: {% if breakpoint.id == 'mobile' %}up to <code>{{ breakpoint.to }}px</code>{% else %}from <code>{{ breakpoint.from }}px</code>{% endif %}</li>
+        {% endfor %}
+      </ul>
+
+      <p>Bulma <a href="{{ mixins_file_url }}" target="_blank">9种混合相应</a>:</p>
+      <ul>
+        {% for breakpoint_hash in site.data.breakpoints %}
+          {% assign breakpoint = breakpoint_hash[1] %}
+          {% case breakpoint.id %}
+            {% when 'mobile' %}
+              <li>
+                <code>={{ breakpoint.id }}</code><br>
+                until <code>{{ breakpoint.to }}px</code>
+              </li>
+            {% when 'fullhd' %}
+              <li>
+                <span class="tag is-success">New!</span>
+                <code>={{ breakpoint.id }}</code><br>
+                from <code>{{ breakpoint.from }}px</code>
+              </li>
+            {% else %}
+              <li>
+                <code>={{ breakpoint.id }}</code><br>
+                from <code>{{ breakpoint.from }}px</code>
+              </li>
+              <li>
+                <code>={{ breakpoint.id }}-only</code><br>
+                from <code>{{ breakpoint.from }}px</code> and until <code>{{ breakpoint.to }}px</code>
+              </li>
+              {% if breakpoint.id == 'tablet' %}
+                <li>
+                  <code>=touch</code><br>
+                  until <code>{{ breakpoint.to }}px</code>
+                </li>
+              {% endif %}
+          {% endcase %}
+        {% endfor %}
+      </ul>
+    </div>
+
+    <table class="table is-bordered">
+      <thead>
+        <tr>
+          {% for breakpoint_hash in site.data.breakpoints %}
+            {% assign breakpoint = breakpoint_hash[1] %}
+            <th style="width: 20%;">
+              {{ breakpoint.name }}<br>
+              {% if breakpoint.id == 'mobile' %}
+                Up to <code>{{ breakpoint.to }}px</code>
+              {% elsif breakpoint.id == 'fullhd' %}
+                <code>{{ breakpoint.from }}px</code> and above
+              {% else %}
+                Between <code>{{ breakpoint.from }}px</code> and <code>{{ breakpoint.to }}px</code>
+              {% endif %}
+            </th>
+          {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <p class="notification is-success">mobile</p>
+          </td>
+          <td colspan="4">
+            <p class="notification">-</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p class="notification">-</p>
+          </td>
+          <td colspan="4">
+            <p class="notification is-success">tablet</p>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <p class="notification">-</p>
+          </td>
+          <td colspan="3">
+            <p class="notification is-success">desktop</p>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <p class="notification">-</p>
+          </td>
+          <td colspan="2">
+            <p class="notification is-success">widescreen</p>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="4">
+            <p class="notification">-</p>
+          </td>
+          <td>
+            <p class="notification is-success">fullhd</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p class="notification">-</p>
+          </td>
+          <td>
+            <p class="notification is-success">tablet-only</p>
+          </td>
+          <td colspan="3">
+            <p class="notification">-</p>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <p class="notification">-</p>
+          </td>
+          <td>
+            <p class="notification is-success">desktop-only</p>
+          </td>
+          <td colspan="2">
+            <p class="notification">-</p>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <p class="notification">-</p>
+          </td>
+          <td>
+            <p class="notification is-success">widescreen-only</p>
+          </td>
+          <td>
+            <p class="notification">-</p>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <p class="notification is-success">touch</p>
+          </td>
+          <td colspan="3">
+            <p class="notification">-</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    {% include anchor.html name="Variables | 变量" %}
+
+    <div class="content">
+      <p>
+        你可以使用 <a href="{{ variables_file_url }}" target="_blank">这些变量</a> 来 <strong>自定义</strong> 响应断点. 只需要简单的在导入 Bulma <em>之前</em> 设置这些变量 <a href="{{ site.url }}/documentation/overview/customize/">学习如何这么做</a>。
+      </p>
+    </div>
+
+    <table class="table is-bordered">
+      <thead>
+        <tr>
+          <th>变量名</th>
+          <th>默认值</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <th>变量名</th>
+          <th>默认值</th>
+        </tr>
+      </tfoot>
+      <tbody>
+        {% for key in page.variables_keys %}
+          {% assign variable = site.data.variables.utilities.initial-variables.vars[key] %}
+          <tr>
+            <td>
+              <code>{{ variable.name }}</code>
+            </td>
+            <td>
+              <code>{{ variable.value }}</code>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+  </div>
+</section>

@@ -1,0 +1,74 @@
+---
+layout: default
+route: documentation
+---
+
+{% include navbar.html id="Documentation" has_container=true %}
+
+<section class="hero is-link">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column">
+          <p class="title">
+            文档
+          </p>
+          <p class="subtitle">
+            当你使用 Bulma <strong>创建一个网站</strong> 所需要的一切
+          </p>
+        </div>
+        <div class="column is-narrow">
+          {% include carbon.html %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-foot">
+    <div class="container">
+      <nav class="tabs is-boxed">
+        <ul>
+          <li {% if page.doc-tab == 'overview' %}class="is-active"{% endif %}>
+            <a href="{{ site.documentation }}">概述</a>
+          </li>
+          <li {% if page.doc-tab == 'modifiers' %}class="is-active"{% endif %}>
+            <a href="{{ site.url }}/documentation/modifiers/syntax">修饰符</a>
+          </li>
+          <li {% if page.doc-tab == 'columns' %}class="is-active"{% endif %}>
+            <a href="{{ site.url }}/documentation/columns/basics">列</a>
+          </li>
+          <li {% if page.doc-tab == 'layout' %}class="is-active"{% endif %}>
+            <a href="{{ site.url }}/documentation/layout/container/">布局</a>
+          </li>
+          <li {% if page.doc-tab == 'form' %}class="is-active"{% endif %}>
+            <a href="{{ site.url }}/documentation/form/general">表单</a>
+          </li>
+          <li {% if page.doc-tab == 'elements' %}class="is-active"{% endif %}>
+            <a href="{{ site.url }}/documentation/elements/box/">元素</a>
+          </li>
+          <li {% if page.doc-tab == 'components' %}class="is-active"{% endif %}>
+            <a href="{{ site.url }}/documentation/components/breadcrumb/">组件</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</section>
+
+{{ content }}
+
+<section class="section bd-typo">
+  <div class="container">
+    <p class="has-text-centered has-text-grey-light">
+      <a href="{{ site.url }}/made-with-bulma/">
+        <img src="{{ site.url }}/images/made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
+      </a>
+      <br>
+      这是一个 <strong class="has-text-grey">开源项目</strong>.
+      错别字? Or 有疑问?
+      <a class="has-text-grey" href="https://github.com/jgthms/bulma/blob/master/docs/{{ page.path }}" style="border-bottom: 1px solid currentColor;">
+        在GitHub上改进这个页面。
+      </a>
+    </p>
+  </div>
+</section>

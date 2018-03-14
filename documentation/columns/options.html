@@ -1,0 +1,196 @@
+---
+title: 列选项
+layout: documentation
+doc-tab: columns
+doc-subtab: options
+---
+
+{% capture columns_multiline %}
+<div class="columns is-multiline is-mobile">
+  <div class="column is-one-quarter">
+    <code>is-one-quarter</code>
+  </div>
+  <div class="column is-one-quarter">
+    <code>is-one-quarter</code>
+  </div>
+  <div class="column is-one-quarter">
+    <code>is-one-quarter</code>
+  </div>
+  <div class="column is-one-quarter">
+    <code>is-one-quarter</code>
+  </div>
+  <div class="column is-half">
+    <code>is-half</code>
+  </div>
+  <div class="column is-one-quarter">
+    <code>is-one-quarter</code>
+  </div>
+  <div class="column is-one-quarter">
+    <code>is-one-quarter</code>
+  </div>
+  <div class="column is-one-quarter">
+    <code>is-one-quarter</code>
+  </div>
+  <div class="column">
+    Auto
+  </div>
+</div>
+{% endcapture %}
+
+{% capture columns_mobile_centered %}
+<div class="columns is-mobile is-centered">
+  <div class="column is-half is-narrow">
+    <p class="bd-notification is-info">
+      <code class="html">is-half</code><br>
+      <code class="html">is-narrow</code>
+    </p>
+  </div>
+</div>
+{% endcapture %}
+
+{% capture columns_mobile_multiline_centered %}
+<div class="columns is-mobile is-multiline is-centered">
+  <div class="column is-narrow">
+    <p class="bd-notification is-info">
+      <code class="html">is-narrow</code><br>
+      First Column
+    </p>
+  </div>
+  <div class="column is-narrow">
+    <p class="bd-notification is-success">
+      <code class="html">is-narrow</code><br>
+      Our Second Column
+    </p>
+  </div>
+  <div class="column is-narrow">
+    <p class="bd-notification is-danger">
+      <code class="html">is-narrow</code><br>
+      Third Column
+    </p>
+  </div>
+  <div class="column is-narrow">
+    <p class="bd-notification is-info">
+      <code class="html">is-narrow</code><br>
+      The Fourth Column
+    </p>
+  </div>
+  <div class="column is-narrow">
+    <p class="bd-notification is-success">
+      <code class="html">is-narrow</code><br>
+      Fifth Column
+    </p>
+  </div>
+</div>
+{% endcapture %}
+
+{% include subnav-columns.html %}
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">列选项</h1>
+    <h2 class="subtitle">
+        设计不同 <strong>类型</strong> 的列布局
+    </h2>
+
+    {% include anchor.html name="Multiline" %}
+
+    <div class="content">
+        <p>当你想换行时，你可以闭合 <code>columns</code> 容器标签然后开始新的一行，您也可以在容器上通过增加 <code>is-multiline</code> 修饰符，来增加 <strong>更多</strong> 的行容纳 <code>column</code> 元素。
+
+        </p>
+    </div>
+
+    <div class="columns is-multiline is-mobile">
+      <div class="column is-one-quarter">
+        <p class="bd-notification is-info"><code>is-one-quarter</code></p>
+      </div>
+      <div class="column is-one-quarter">
+        <p class="bd-notification is-success"><code>is-one-quarter</code></p>
+      </div>
+      <div class="column is-one-quarter">
+        <p class="bd-notification is-warning"><code>is-one-quarter</code></p>
+      </div>
+      <div class="column is-one-quarter">
+        <p class="bd-notification is-danger"><code>is-one-quarter</code></p>
+      </div>
+      <div class="column is-half">
+        <p class="bd-notification is-info"><code>is-half</code></p>
+      </div>
+      <div class="column is-one-quarter">
+        <p class="bd-notification is-success"><code>is-one-quarter</code></p>
+      </div>
+      <div class="column is-one-quarter">
+        <p class="bd-notification is-warning"><code>is-one-quarter</code></p>
+      </div>
+      <div class="column is-one-quarter">
+        <p class="bd-notification is-danger"><code>is-one-quarter</code></p>
+      </div>
+      <div class="column">
+        <p class="bd-notification is-info">Auto</p>
+      </div>
+    </div>
+
+    {% highlight html %}{{ columns_multiline }}{% endhighlight %}
+
+    {% include anchor.html name="Centering columns" %}
+
+    <div class="content">
+      <p>
+         虽然您可以通过 <em>空列</em>（例如<code>&lt;div class="column"&gt;&lt;/div&gt;</code>）来创建一个水平居中的 <code>.column</code> 元素。当然您也可以通过在
+<code>.column</code> 的父级元素上添加 <code>.is-centered</code> 来实现。
+      </p>
+    </div>
+
+    <div class="columns is-mobile is-centered">
+      <div class="column is-half is-narrow">
+        <p class="bd-notification is-info">
+          <code class="html">is-half</code><br>
+          <code class="html">is-narrow</code>
+        </p>
+      </div>
+    </div>
+
+    {% highlight html %}{{ columns_mobile_centered }}{% endhighlight %}
+
+    <div class="content">
+      <p>
+          与 <code>.is-multiline</code> 一起使用来创建一个灵活的居中列表。（尝试改变窗口大小来查看区别）
+      </p>
+    </div>
+
+    <div class="columns is-mobile is-multiline is-centered">
+      <div class="column is-narrow">
+        <p class="bd-notification is-info" style="padding: 1.25rem 1.5rem;">
+          <code class="html">is-narrow</code><br>
+          First Column
+        </p>
+      </div>
+      <div class="column is-narrow">
+        <p class="bd-notification is-success" style="padding: 1.25rem 1.5rem;">
+          <code class="html">is-narrow</code><br>
+          Our Second Column
+        </p>
+      </div>
+      <div class="column is-narrow">
+        <p class="bd-notification is-danger" style="padding: 1.25rem 1.5rem;">
+          <code class="html">is-narrow</code><br>
+          Third Column
+        </p>
+      </div>
+      <div class="column is-narrow">
+        <p class="bd-notification is-info" style="padding: 1.25rem 1.5rem;">
+          <code class="html">is-narrow</code><br>
+          The Fourth Column
+        </p>
+      </div>
+      <div class="column is-narrow">
+        <p class="bd-notification is-success" style="padding: 1.25rem 1.5rem;">
+          <code class="html">is-narrow</code><br>
+          Fifth Column
+        </p>
+      </div>
+    </div>
+
+    {% highlight html %}{{ columns_mobile_multiline_centered }}{% endhighlight %}
+  </div>
+</section>

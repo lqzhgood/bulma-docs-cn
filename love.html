@@ -1,0 +1,56 @@
+---
+fulltitle: Love for Bulma 😍
+layout: default
+route: love
+tweets:
+- id: "900692286744535041"
+  date: "2:12 PM - 24 Aug 2017"
+  content: 'So impressed with the speed and clarity of implementing <a href="https://twitter.com/search?q=%23bulma">#bulma</a> CSS framework on a new project. Kudos <a href="https://twitter.com/jgthms">@jgthms</a>'
+  fullname: "Jamie Hylands"
+  username: "JamieAHylands"
+  avatar: "https://pbs.twimg.com/profile_images/872757791236272128/31VmJF-L_normal.jpg"
+  hearts: "1"
+  retweets: "0"
+---
+
+{% include navbar.html id="LoveHero" %}
+
+<section class="hero bd-is-love bd-rainbow">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column">
+          <h1 class="title">
+            Love
+          </h1>
+          <p class="subtitle">
+            Happy thoughts from Twitter <span style="font-size: 20px; margin-left: 2px; position: relative; top: 1px;">😃</span>
+          </p>
+        </div>
+        <div class="column is-narrow">
+          {% include carbon.html %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main class="bd-love">
+  <div class="container">
+    <div class="bd-embrace">
+      <p class="bd-embrace-text">
+        Are you a Bulma fan too? <strong>Show your support!</strong> <span style="font-size: 20px; margin-left: 2px; position: relative; top: 1px;">🤗</span>
+      </p>
+      <p class="bd-embrace-button">
+        {% include elements/tw-button.html label="Tweet #bulmaio" %}
+      </p>
+    </div>
+
+    <div class="bd-tws-love">
+      {% for tweetId in site.data.love.tweets reversed %}
+        {% assign tweet = site.data.love.tweetsById[tweetId] %}
+        {% include tw.html tweet=tweet %}
+      {% endfor %}
+    </div>
+  </div>
+</main>

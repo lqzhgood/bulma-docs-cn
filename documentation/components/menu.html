@@ -1,0 +1,65 @@
+---
+title: Menu
+layout: documentation
+doc-tab: components
+doc-subtab: menu
+---
+
+{% capture menu_example %}
+<aside class="menu">
+  <p class="menu-label">
+    General
+  </p>
+  <ul class="menu-list">
+    <li><a>Dashboard</a></li>
+    <li><a>Customers</a></li>
+  </ul>
+  <p class="menu-label">
+    Administration
+  </p>
+  <ul class="menu-list">
+    <li><a>Team Settings</a></li>
+    <li>
+      <a class="is-active">Manage Your Team</a>
+      <ul>
+        <li><a>Members</a></li>
+        <li><a>Plugins</a></li>
+        <li><a>Add a member</a></li>
+      </ul>
+    </li>
+    <li><a>Invitations</a></li>
+    <li><a>Cloud Storage Environment Settings</a></li>
+    <li><a>Authentication</a></li>
+  </ul>
+  <p class="menu-label">
+    Transactions
+  </p>
+  <ul class="menu-list">
+    <li><a>Payments</a></li>
+    <li><a>Transfers</a></li>
+    <li><a>Balance</a></li>
+  </ul>
+</aside>
+{% endcapture %}
+
+{% include subnav-components.html %}
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">Menu</h1>
+    <h2 class="subtitle">一个简单的 <strong>菜单</strong>，适用于任何类型的垂直导航</h2>
+    {%
+      include meta.html
+      colors=false
+      sizes=false
+      variables=true
+    %}
+
+    <hr>
+
+    {% include snippet.html content=menu_example size="one-third" %}
+
+    {% include variables.html type='component' %}
+
+  </div>
+</section>

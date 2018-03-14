@@ -1,0 +1,86 @@
+---
+title: 颜色
+layout: documentation
+doc-tab: overview
+doc-subtab: colors
+colors:
+- white
+- black
+- light
+- dark
+- primary
+- link
+- info
+- success
+- warning
+- danger
+---
+
+{% include subnav-overview.html %}
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">Colors</h1>
+    <h2 class="subtitle">大多数 Bulma 元素和组件的 <strong>颜色</strong> 和 <strong>风格</strong></h2>
+
+    <hr>
+
+    <div class="content">
+      <p>
+          大多数元素和组件都可以使用 <code>.is-$color</code> 修饰符来改变颜色，例如 <code>is-primary</code> 或者 <code>is-dark</code>。
+      </p>
+      <p>
+          可以通过 <code>$colors</code> <strong>Sass map</strong> 来获得所有的颜色和他们的反色。
+      </p>
+    </div>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Color</th>
+          <th>Variable</th>
+          <th>Value</th>
+          <th>Computed value</th>
+          <th>Invert value</th>
+          <th>Computed invert value</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for color in page.colors %}
+          {% assign derivedColor = site.data.colors.derived | where: "id", color | first %}
+          {% assign initialColor = site.data.colors.initial | where: "id", derivedColor.valueId | first %}
+          <tr>
+            <td>
+              <strong>{{ derivedColor.id | capitalize }}</strong>
+            </td>
+            <td>
+              <code>${{ derivedColor.id }}</code>
+            </td>
+            <td>
+              <code>${{ initialColor.id }}</code>
+            </td>
+            <td>
+              {% include elements/color-square.html value=initialColor.value %}
+            </td>
+            {% if derivedColor.invertValue %}
+              <td>
+                <code>{{ derivedColor.invertValue }}</code>
+              </td>
+              <td>
+                {% include elements/color-square.html value=derivedColor.invertValue %}
+              </td>
+            {% elsif derivedColor.invertId %}
+              {% assign invertColor = site.data.colors.initial | where: "id", derivedColor.invertId | first %}
+              <td>
+                <code>${{ derivedColor.invertId }}</code>
+              </td>
+              <td>
+                {% include elements/color-square.html value=invertColor.value %}
+              </td>
+            {% endif %}
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>

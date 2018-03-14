@@ -1,0 +1,140 @@
+---
+title: 开始使用 Bulma
+layout: documentation
+doc-tab: overview
+doc-subtab: start
+---
+
+{% include subnav-overview.html %}
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">入门指南</h1>
+    <h2 class="subtitle">你只要使用 <strong>1 个 CSS 文件</strong> 来使用 bulma</h2>
+
+    <hr>
+
+    <div class="content">
+      <p>
+        你有几种方式 <strong>开始使用</strong> Bulma:
+      </p>
+      <ol>
+        <li>
+          使用 <strong>npm</strong> 来安装 Bulma 包
+        </li>
+        <li>
+          使用 cdnjs <strong>CDN</strong> 来链接 Bulma 样式表
+        </li>
+        <li>
+          使用 <strong>GitHub repository</strong> 来获得最新的开发版本
+        </li>
+      </ol>
+    </div>
+
+    <article class="media is-large">
+      <div class="media-left">
+        <p class="title is-5">1</p>
+      </div>
+      <div class="media-content">
+        <p class="title is-5">
+          使用 <strong>NPM</strong> <em>(推荐)</em>:
+        </p>
+        {% highlight bash %}npm install bulma{% endhighlight %}
+      </div>
+    </article>
+
+    <article class="media is-large">
+      <div class="media-left">
+        <p class="title is-5">2</p>
+      </div>
+      <div class="media-content">
+        <p class="title is-5">
+          使用 <a href="https://cdnjs.com/" target="_blank">cdnjs</a> <strong>CDN</strong>
+          <br>
+          <a href="https://cdnjs.com/libraries/bulma">https://cdnjs.com/libraries/bulma</a>
+        </p>
+      </div>
+    </article>
+
+    <article class="media is-large">
+      <div class="media-left">
+        <p class="title is-5">3</p>
+      </div>
+      <div class="media-content">
+        <p class="title is-5">
+          从 <strong>Github repository</strong> 下载
+          <br>
+          <a href="https://github.com/jgthms/bulma/tree/master/css">https://github.com/jgthms/bulma/tree/master/css</a>
+        </p>
+      </div>
+    </article>
+
+    <hr>
+
+    <div class="message is-info">
+      <div class="message-header">
+        Font Awesome icons
+      </div>
+      <div class="message-body">
+        <p>如果你想在 Bulma 中使用图标，请不要忘记包含 <a href="https://fontawesome.com">Font Awesome 5</a>:</p>
+        {% highlight html %}<script defer src="{{ site.data.icons.fontawesome5 }}"></script>{% endhighlight %}
+      </div>
+    </div>
+
+    {% include anchor.html name="Code requirements | 代码规范" %}
+
+    <div class="content">
+      <p>
+        为了让 Bulma 正常工作，您需要使用 <strong>响应式</strong> 的页面。
+      </p>
+    </div>
+
+    <article class="media is-large">
+      <div class="media-left">
+        <p class="title is-5">1</p>
+      </div>
+      <div class="media-content">
+        <p class="title is-5">
+         使用 <strong>HTML5 doctype</strong>
+        </p>
+        {% highlight html %}<!DOCTYPE html>{% endhighlight %}
+      </div>
+    </article>
+
+    <article class="media is-large">
+      <div class="media-left">
+        <p class="title is-5">2</p>
+      </div>
+      <div class="media-content">
+        <p class="title is-5">
+            增加响应式 <strong>viewport</strong> meta 标签
+        </p>
+        {% highlight html %}<meta name="viewport" content="width=device-width, initial-scale=1">{% endhighlight %}
+      </div>
+    </article>
+
+    {% include anchor.html name="Starter template | 开始模板" %}
+
+    <div class="content">
+      <p>
+          如果您想 <strong>立即</strong> 开始，您可以使用这个 <strong>HTML 模板</strong>，只需要 复制/粘贴 这段代码到文件中并保存。
+      </p>
+    </div>
+
+    <div class="bd-example highlight-full">
+      {% highlight html %}{% include getting-started.html %}{% endhighlight %}
+    </div>
+
+    {% include anchor.html name="bulma-start" %}
+
+    <div class="content">
+      <p>
+        <code><a href="/bulma-start/">bulma-start</a></code> 是一个很小的 <code>npm</code> 包，它包含使用 Bulma 创建一个网站所需的依赖项。
+      </p>
+      <p>
+        <a class="button is-link" href="/bulma-start/">查看</a>
+      </p>
+    </div>
+
+  </div>
+</section>

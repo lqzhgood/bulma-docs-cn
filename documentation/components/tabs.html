@@ -1,0 +1,451 @@
+---
+title: Tabs
+layout: documentation
+doc-tab: components
+doc-subtab: tabs
+---
+
+{% capture tabs_example %}
+<div class="tabs">
+  <ul>
+    <li class="is-active"><a>Pictures</a></li>
+    <li><a>Music</a></li>
+    <li><a>Videos</a></li>
+    <li><a>Documents</a></li>
+  </ul>
+</div>
+{% endcapture %}
+
+{% capture tabs_centered_example %}
+<div class="tabs is-centered">
+  <ul>
+    <li class="is-active"><a>Pictures</a></li>
+    <li><a>Music</a></li>
+    <li><a>Videos</a></li>
+    <li><a>Documents</a></li>
+  </ul>
+</div>
+{% endcapture %}
+
+{% capture tabs_right_example %}
+<div class="tabs is-right">
+  <ul>
+    <li class="is-active"><a>Pictures</a></li>
+    <li><a>Music</a></li>
+    <li><a>Videos</a></li>
+    <li><a>Documents</a></li>
+  </ul>
+</div>
+{% endcapture %}
+
+{% capture tabs_icons_example %}
+<div class="tabs is-centered">
+  <ul>
+    <li class="is-active">
+      <a>
+        <span class="icon is-small"><i class="fas fa-image"></i></span>
+        <span>Pictures</span>
+      </a>
+    </li>
+    <li>
+      <a>
+        <span class="icon is-small"><i class="fas fa-music"></i></span>
+        <span>Music</span>
+      </a>
+    </li>
+    <li>
+      <a>
+        <span class="icon is-small"><i class="fas fa-film"></i></span>
+        <span>Videos</span>
+      </a>
+    </li>
+    <li>
+      <a>
+        <span class="icon is-small"><i class="fas fa-file-alt"></i></span>
+        <span>Documents</span>
+      </a>
+    </li>
+  </ul>
+</div>
+{% endcapture %}
+
+{% capture tabs_small_example %}
+<div class="tabs is-small">
+  <ul>
+    <li class="is-active"><a>Pictures</a></li>
+    <li><a>Music</a></li>
+    <li><a>Videos</a></li>
+    <li><a>Documents</a></li>
+  </ul>
+</div>
+{% endcapture %}
+
+{% capture tabs_medium_example %}
+<div class="tabs is-medium">
+  <ul>
+    <li class="is-active"><a>Pictures</a></li>
+    <li><a>Music</a></li>
+    <li><a>Videos</a></li>
+    <li><a>Documents</a></li>
+  </ul>
+</div>
+{% endcapture %}
+
+{% capture tabs_large_example %}
+<div class="tabs is-large">
+  <ul>
+    <li class="is-active"><a>Pictures</a></li>
+    <li><a>Music</a></li>
+    <li><a>Videos</a></li>
+    <li><a>Documents</a></li>
+  </ul>
+</div>
+{% endcapture %}
+
+{% capture tabs_boxed_example %}
+<div class="tabs is-boxed">
+  <ul>
+    <li class="is-active">
+      <a>
+        <span class="icon is-small"><i class="fas fa-image"></i></span>
+        <span>Pictures</span>
+      </a>
+    </li>
+    <li>
+      <a>
+        <span class="icon is-small"><i class="fas fa-music"></i></span>
+        <span>Music</span>
+      </a>
+    </li>
+    <li>
+      <a>
+        <span class="icon is-small"><i class="fas fa-film"></i></span>
+        <span>Videos</span>
+      </a>
+    </li>
+    <li>
+      <a>
+        <span class="icon is-small"><i class="fas fa-file-alt"></i></span>
+        <span>Documents</span>
+      </a>
+    </li>
+  </ul>
+</div>
+{% endcapture %}
+
+{% capture tabs_toggle_example %}
+<div class="tabs is-toggle">
+  <ul>
+    <li class="is-active">
+      <a>
+        <span class="icon is-small"><i class="fas fa-image"></i></span>
+        <span>Pictures</span>
+      </a>
+    </li>
+    <li>
+      <a>
+        <span class="icon is-small"><i class="fas fa-music"></i></span>
+        <span>Music</span>
+      </a>
+    </li>
+    <li>
+      <a>
+        <span class="icon is-small"><i class="fas fa-film"></i></span>
+        <span>Videos</span>
+      </a>
+    </li>
+    <li>
+      <a>
+        <span class="icon is-small"><i class="fas fa-file-alt"></i></span>
+        <span>Documents</span>
+      </a>
+    </li>
+  </ul>
+</div>
+{% endcapture %}
+
+{% capture tabs_toggle_rounded_example %}
+<div class="tabs is-toggle is-toggle-rounded">
+  <ul>
+    <li class="is-active">
+      <a>
+        <span class="icon is-small"><i class="fas fa-image"></i></span>
+        <span>Pictures</span>
+      </a>
+    </li>
+    <li>
+      <a>
+        <span class="icon is-small"><i class="fas fa-music"></i></span>
+        <span>Music</span>
+      </a>
+    </li>
+    <li>
+      <a>
+        <span class="icon is-small"><i class="fas fa-film"></i></span>
+        <span>Videos</span>
+      </a>
+    </li>
+    <li>
+      <a>
+        <span class="icon is-small"><i class="fas fa-file-alt"></i></span>
+        <span>Documents</span>
+      </a>
+    </li>
+  </ul>
+</div>
+{% endcapture %}
+
+{% capture tabs_fullwidth_example %}
+<div class="tabs is-fullwidth">
+  <ul>
+    <li>
+      <a>
+        <span class="icon"><i class="fas fa-angle-left"></i></span>
+        <span>Left</span>
+      </a>
+    </li>
+    <li>
+      <a>
+        <span class="icon"><i class="fas fa-angle-up"></i></span>
+        <span>Up</span>
+      </a>
+    </li>
+    <li>
+      <a>
+        <span>Right</span>
+        <span class="icon"><i class="fas fa-angle-right"></i></span>
+      </a>
+    </li>
+  </ul>
+</div>
+{% endcapture %}
+
+{% capture tabs_centered_boxed_example %}
+<div class="tabs is-centered is-boxed">
+  <ul>
+    <li class="is-active">
+      <a>
+        <span class="icon is-small"><i class="fas fa-image"></i></span>
+        <span>Pictures</span>
+      </a>
+    </li>
+    <li>
+      <a>
+        <span class="icon is-small"><i class="fas fa-music"></i></span>
+        <span>Music</span>
+      </a>
+    </li>
+    <li>
+      <a>
+        <span class="icon is-small"><i class="fas fa-film"></i></span>
+        <span>Videos</span>
+      </a>
+    </li>
+    <li>
+      <a>
+        <span class="icon is-small"><i class="fas fa-file-alt"></i></span>
+        <span>Documents</span>
+      </a>
+    </li>
+  </ul>
+</div>
+{% endcapture %}
+
+{% capture tabs_toggle_fullwidth_example %}
+<div class="tabs is-toggle is-fullwidth">
+  <ul>
+    <li class="is-active">
+      <a>
+        <span class="icon is-small"><i class="fas fa-image"></i></span>
+        <span>Pictures</span>
+      </a>
+    </li>
+    <li>
+      <a>
+        <span class="icon is-small"><i class="fas fa-music"></i></span>
+        <span>Music</span>
+      </a>
+    </li>
+    <li>
+      <a>
+        <span class="icon is-small"><i class="fas fa-film"></i></span>
+        <span>Videos</span>
+      </a>
+    </li>
+    <li>
+      <a>
+        <span class="icon is-small"><i class="fas fa-file-alt"></i></span>
+        <span>Documents</span>
+      </a>
+    </li>
+  </ul>
+</div>
+{% endcapture %}
+
+{% capture tabs_centered_boxed_medium_example %}
+<div class="tabs is-centered is-boxed is-medium">
+  <ul>
+    <li class="is-active">
+      <a>
+        <span class="icon is-small"><i class="fas fa-image"></i></span>
+        <span>Pictures</span>
+      </a>
+    </li>
+    <li>
+      <a>
+        <span class="icon is-small"><i class="fas fa-music"></i></span>
+        <span>Music</span>
+      </a>
+    </li>
+    <li>
+      <a>
+        <span class="icon is-small"><i class="fas fa-film"></i></span>
+        <span>Videos</span>
+      </a>
+    </li>
+    <li>
+      <a>
+        <span class="icon is-small"><i class="fas fa-file-alt"></i></span>
+        <span>Documents</span>
+      </a>
+    </li>
+  </ul>
+</div>
+{% endcapture %}
+
+{% capture tabs_toggle_fullwidth_large_example %}
+<div class="tabs is-toggle is-fullwidth is-large">
+  <ul>
+    <li class="is-active">
+      <a>
+        <span class="icon"><i class="fas fa-image"></i></span>
+        <span>Pictures</span>
+      </a>
+    </li>
+    <li>
+      <a>
+        <span class="icon"><i class="fas fa-music"></i></span>
+        <span>Music</span>
+      </a>
+    </li>
+    <li>
+      <a>
+        <span class="icon"><i class="fas fa-film"></i></span>
+        <span>Videos</span>
+      </a>
+    </li>
+    <li>
+      <a>
+        <span class="icon"><i class="fas fa-file-alt"></i></span>
+        <span>Documents</span>
+      </a>
+    </li>
+  </ul>
+</div>
+{% endcapture %}
+
+{% include subnav-components.html %}
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">Tabs</h1>
+    <h2 class="subtitle"> 其他风格的简单的响应式水平导航 <strong>选项卡</strong></h2>
+    {%
+      include meta.html
+      since="0.4.4"
+      colors=false
+      sizes=true
+      variables=true
+    %}
+
+    <hr>
+
+    <div class="content">
+      <p>
+            <strong>标签</strong> 只需要一个 <code>tabs</code> 容器和 <code>&lt;ul&gt;</code> 列表 <br>
+            <strong>默认</strong> 标签样式会有一个底部边框
+    </div>
+
+    {% include snippet.html content=tabs_example horizontal=true %}
+
+    {% include snippet.html content=tabs_example horizontal=true more=true %}
+
+    {% include anchor.html name="Alignment | 对齐" %}
+
+    <div class="content">
+      <p>
+          要对齐选项卡列表，请在 <code>.tabs</code> 容器上使用 <code>is-centered</code> 或 <code>is-right</code> 修饰符：
+      </p>
+    </div>
+
+    {% include snippet.html content=tabs_centered_example horizontal=true more=true %}
+
+    {% include snippet.html content=tabs_right_example horizontal=true more=true %}
+
+    {% include anchor.html name="Icons | 图标" %}
+
+    <div class="content">
+      <p>您可以使用任何 <a href="http://fontawesome.io/">Font Awesome</a> <strong>图标</strong>.</p>
+    </div>
+
+    {% include snippet.html content=tabs_icons_example horizontal=true more=true %}
+
+    {% include snippet.html content=tabs_icons_example horizontal=true more=true %}
+
+    {% include anchor.html name="Sizes | 尺寸" %}
+    <div class="content">
+      <p>您可以选择 <strong>3种尺寸</strong>: <code>is-small</code> <code>is-medium</code> 和 <code>is-large</code>.</p>
+    </div>
+
+    {% include snippet.html content=tabs_small_example horizontal=true more=true %}
+
+    {% include snippet.html content=tabs_medium_example horizontal=true more=true %}
+
+    {% include snippet.html content=tabs_large_example horizontal=true more=true %}
+
+    {% include anchor.html name="Styles | 样式" %}
+
+    <div class="content">
+      如果您想要带有 <strong>边框</strong> 的经典风格, 只需要添加 <code>is-boxed</code> 修饰符.
+    </div>
+
+    {% include snippet.html content=tabs_boxed_example horizontal=true more=true %}
+
+    <p class="content">
+        如果您想要互相独立的标签（选择某个将取消其他选择），请使用 <code>is-toggle</code> 修饰符。
+    </p>
+
+    {% include snippet.html content=tabs_toggle_example horizontal=true more=true %}
+
+    {% include elements/new-tag.html version="0.6.2" %}
+
+    <p class="content">
+        如果您同时使用 <code>is-toggle</code> 和 <code>is-toggle-rounded</code>，则最前和最后的项目将会变为 <strong>圆角</strong>。
+    </p>
+
+    {% include snippet.html content=tabs_toggle_rounded_example horizontal=true more=true %}
+
+    <p class="content">
+        如果您希望选项卡占据 <strong>整个宽度</strong>，可以使用 <code>is-fullwidth</code> 修饰符。
+    </p>
+
+    {% include snippet.html content=tabs_fullwidth_example horizontal=true more=true %}
+
+    {% include anchor.html name="Combining | 组合" %}
+
+    <div class="content">
+      <p>您可以 <strong>结合</strong> 不通的修饰符。 例如，您可以拥有居中的 <strong>盒装结构</strong> 或 <strong>全宽切换</strong> 的标签。</p>
+    </div>
+
+    {% include snippet.html content=tabs_centered_boxed_example horizontal=true more=true %}
+
+    {% include snippet.html content=tabs_toggle_fullwidth_example horizontal=true more=true %}
+
+    {% include snippet.html content=tabs_centered_boxed_medium_example horizontal=true more=true %}
+
+    {% include snippet.html content=tabs_toggle_fullwidth_large_example horizontal=true more=true %}
+
+    {% include variables.html type='component' %}
+
+  </div>
+</section>

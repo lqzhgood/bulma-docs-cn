@@ -1,0 +1,100 @@
+---
+title: 模块化
+layout: documentation
+doc-tab: overview
+doc-subtab: modular
+---
+
+{% include subnav-overview.html %}
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">模块化</h1>
+    <h2 class="subtitle">只需导入你 <strong>需要</strong> 的东西</h2>
+
+    <hr>
+
+    <div class="content">
+      <p>
+        Bulma 由 <strong>39</strong> 个 <code>.sass</code> 文件组成，您可以 <strong>单独</strong> 导入。
+      </p>
+      <p>
+        例如，您只需要 Bulma <strong>columns.</strong>
+        <br>
+        该文件位于 <code>bulma/sass/grid</code> 文件夹中.
+        <br>
+        只需要 <strong>导入</strong> 公共依赖，然后直接导入您需要的文件：
+      </p>
+{% highlight sass %}
+@import "bulma/sass/utilities/_all"
+@import "bulma/sass/grid/columns"
+{% endhighlight %}
+      <p>
+        现在您可以直接使用 <code>.columns</code> 类 (用于容器) 和 <code>.column</code> :
+      </p>
+{% highlight html %}
+<div class="columns">
+  <div class="column">1</div>
+  <div class="column">2</div>
+  <div class="column">3</div>
+  <div class="column">4</div>
+  <div class="column">5</div>
+</div>
+{% endhighlight %}
+
+      <hr>
+
+      <p>
+        如果您只需要 <strong>button</strong> 样式呢?
+      </p>
+{% highlight sass %}
+@import "bulma/sass/utilities/_all"
+@import "bulma/sass/elements/button.sass"
+{% endhighlight %}
+      <p>
+        您现在可以使用 <code>.button</code> 类, 及其所有修饰符:
+      </p>
+      <ul>
+        <li>
+          <code>.is-active</code>
+        </li>
+        <li>
+          <code>.is-primary</code>,
+          <code>.is-info</code>,
+          <code>.is-success</code>...
+        </li>
+        <li>
+          <code>.is-small</code>,
+          <code>.is-medium</code>,
+          <code>.is-large</code>
+        </li>
+        <li>
+          <code>.is-outlined</code>,
+          <code>.is-inverted</code>,
+          <code>.is-link</code>
+        </li>
+        <li>
+          <code>.is-loading</code>,
+          <code>[disabled]</code>
+        </li>
+      </ul>
+{% highlight html %}
+<a class="button">
+  Button
+</a>
+
+<a class="button is-primary">
+  Primary button
+</a>
+
+<a class="button is-large">
+  Large button
+</a>
+
+<a class="button is-loading">
+  Loading button
+</a>
+{% endhighlight %}
+    </div>
+  </div>
+</section>

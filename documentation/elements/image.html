@@ -1,0 +1,125 @@
+---
+title: Image
+layout: documentation
+doc-tab: elements
+doc-subtab: image
+dimensions:
+- 16
+- 24
+- 32
+- 48
+- 64
+- 96
+- 128
+---
+
+{% capture image %}
+<figure class="image is-128x128">
+  <img src="{{site.url}}/images/placeholders/128x128.png">
+</figure>
+{% endcapture %}
+
+{% capture retina_image %}
+<figure class="image is-128x128">
+  <img src="{{site.url}}/images/placeholders/256x256.png">
+</figure>
+{% endcapture %}
+
+{% include subnav-elements.html %}
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">Images</h1>
+    <h2 class="subtitle">
+        一个用于 <strong>响应式图片</strong> 的容器
+    </h2>
+    {%
+      include meta.html
+      colors=false
+      sizes=false
+      variables=true
+    %}
+
+    <hr>
+
+    <div class="content">
+      <p>由于图像可能需要几秒钟才能加载（或者不用），请使用 <code>.image</code> 容器指定 <strong>精确大小</strong> 的容器，以便布局不会因为图像加载或图像错误而出错。</p>
+    </div>
+
+    {% include snippet.html content=image %}
+
+    {% include anchor.html name="Fixed square images | 固定大小的方形图片" %}
+
+    <div class="content">
+      <p>有 <strong>7</strong> 种大小可供选择，对头像很有帮助:</p>
+    </div>
+
+    <table class="table is-bordered">
+      <tbody>
+        {% for dimension in page.dimensions %}
+          <tr>
+            <td><code>image is-{{ dimension }}x{{ dimension }}</code></td>
+            <td><figure class="image is-{{ dimension }}x{{ dimension }}"><img src="{{site.url}}/images/placeholders/{{ dimension }}x{{ dimension }}.png"></figure></td>
+            <td>{{ dimension }}x{{ dimension }}px</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    {% include anchor.html name="Retina images | 视网膜图片" %}
+
+    <div class="content">
+      <p>因为图像的大小是固定的，所以可以使用 <strong>两倍大小</strong> 的图片。例如，在 <code>128x128</code> 容器中，您可以使用 <code>256x256</code> 的图片，但是可以调整为 <code>128x128</code> 像素。</p>
+    </div>
+
+    {% include snippet.html content=retina_image %}
+
+    {% include anchor.html name="Responsive images with ratios | 根据比例响应式图片" %}
+
+    <div class="content">
+      <p>如果您不知道确切的尺寸，但知道 <strong>比例</strong>，则可以使用 <strong>5种修饰符</strong> 中的一种：</p>
+    </div>
+
+    <table id="images" class="table is-bordered">
+      <tbody>
+        <tr>
+          <td><code>image is-square</code></td>
+          <td><figure class="image is-square"><img src="{{site.url}}/images/placeholders/480x480.png"></figure></td>
+          <td>Square (or 1by1)</td>
+        </tr>
+        <tr>
+          <td><code>image is-1by1</code></td>
+          <td><figure class="image is-1by1"><img src="{{site.url}}/images/placeholders/480x480.png"></figure></td>
+          <td>1 by 1</td>
+        </tr>
+        <tr>
+          <td><code>image is-4by3</code></td>
+          <td><figure class="image is-4by3"><img src="{{site.url}}/images/placeholders/640x480.png"></figure></td>
+          <td>4 by 3</td>
+        </tr>
+        <tr>
+          <td><code>image is-3by2</code></td>
+          <td><figure class="image is-3by2"><img src="{{site.url}}/images/placeholders/480x320.png"></figure></td>
+          <td>3 by 2</td>
+        </tr>
+        <tr>
+          <td><code>image is-16by9</code></td>
+          <td><figure class="image is-16by9"><img src="{{site.url}}/images/placeholders/640x360.png"></figure></td>
+          <td>16 by 9</td>
+        </tr>
+        <tr>
+          <td><code>image is-2by1</code></td>
+          <td><figure class="image is-2by1"><img src="{{site.url}}/images/placeholders/640x320.png"></figure></td>
+          <td>2 by 1</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="content">
+      <p><code>.image</code> 容器在保持比例的情况下将会占据 <strong>整个宽度</strong>。 </p>
+    </div>
+
+    {% include variables.html type='element' %}
+
+  </div>
+</section>

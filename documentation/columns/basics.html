@@ -1,0 +1,60 @@
+---
+title: Columns powered by Flexbox
+layout: documentation
+doc-tab: columns
+doc-subtab: basics
+---
+
+{% capture columns %}
+<div class="columns">
+  <div class="column">
+    第一列
+  </div>
+  <div class="column">
+    第二列
+  </div>
+  <div class="column">
+    第三列
+  </div>
+  <div class="column">
+    第四列
+  </div>
+</div>
+{% endcapture %}
+
+{% include subnav-columns.html %}
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">列</h1>
+    <h2 class="subtitle">通过一个简单方式创建 <strong>响应式的多列</strong></h2>
+    <hr>
+    <div class="content">
+      <p>通过 Bulma 创建一个 <strong>响应式布局</strong> 是非常简单的：</p>
+      <ol>
+        <li>增加一个 <code>columns</code> 作为容器</li>
+        <li>根据你的需要在其中添加更多的 <code>column</code> 元素</li>
+      </ol>
+      <p>无论有多少列，他们的宽度将会 <strong>均分</strong>.</p>
+    </div>
+
+    <div class="columns">
+      <div class="column">
+        <p class="bd-notification is-info">第一列</p>
+      </div>
+      <div class="column">
+        <p class="bd-notification is-success">第二列</p>
+      </div>
+      <div class="column">
+        <p class="bd-notification is-warning">第三列</p>
+      </div>
+      <div class="column">
+        <p class="bd-notification is-danger">第四列</p>
+      </div>
+    </div>
+
+    <div class="highlight-full">
+      {% highlight html %}{{ columns }}{% endhighlight %}
+    </div>
+  </div>
+</section>

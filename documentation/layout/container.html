@@ -1,0 +1,116 @@
+---
+title: 容器
+layout: documentation
+doc-tab: layout
+doc-subtab: container
+---
+
+{% capture container_example %}
+<div class="container">
+  <div class="notification">
+    This container is <strong>centered</strong> on desktop.
+  </div>
+</div>
+{% endcapture %}
+
+{% capture container_fluid_example %}
+<div class="container is-fluid">
+  <div class="notification">
+    This container is <strong>fluid</strong>: it will have a 32px gap on either side, on any
+    viewport size.
+  </div>
+</div>
+{% endcapture %}
+
+{% capture container_widescreen_example %}
+<div class="container is-widescreen">
+  <div class="notification">
+    This container is <strong>fullwidth</strong> <em>until</em> the <code>$widescreen</code> breakpoint.
+  </div>
+</div>
+{% endcapture %}
+
+{% capture container_fullhd_example %}
+<div class="container is-fullhd">
+  <div class="notification">
+    This container is <strong>fullwidth</strong> <em>until</em> the <code>$fullhd</code> breakpoint.
+  </div>
+</div>
+{% endcapture %}
+
+{% include subnav-layout.html %}
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">容器</h1>
+    <h2 class="subtitle">
+        一个可以让您内容水平居中的简单 <strong>容器</strong>
+    </h2>
+
+    <hr>
+
+    <div class="content">
+        <p><code>.container</code> 类可以在任何情况下使用，但是一般用于以下 <strong>子元素</strong>：</p>
+      <ul>
+        <li><code>.navbar</code></li>
+        <li><code>.hero</code></li>
+        <li><code>.section</code></li>
+        <li><code>.footer</code></li>
+      </ul>
+      <p>
+          容器的 <strong>宽度</strong> 将会取决于 每个 <strong>断点</strong>：<code>$device - (2 * $gap)</code>. <code>$gap</code> 变量默认值是 32px ，但是可以被修改。
+      </p>
+      <p>容器的表现形式是：</p>
+      <ul>
+        <li>在 <code>$desktop</code> 下，容器最大的宽度是 <strong>960px</strong>.</li>
+        <li>在 <code>$widescreen</code> 下，容器最大的宽度是 <strong>1152px</strong>.</li>
+        <li>在 <code>$fullhd</code> 下，容器最大的宽度是 <strong>1344px</strong>.</li>
+      </ul>
+      <p>之所以选择 <strong>960</strong>, <strong>1152</strong> and <strong>1344</strong> ，是因为他们能被 <strong>12</strong> 和 <strong>16</strong> 整除。</p>
+    </div>
+  </div>
+</section>
+
+<div class="bd-example is-fullwidth">
+  {{container_example}}
+</div>
+
+{% highlight html %}{{container_example}}{% endhighlight %}
+
+<section class="section">
+<div class="container">
+  <h3 class="title is-4">流体容器</h3>
+  <div class="content">
+    <p>如果您不想限制最大宽度，并且希望保留左右的 32px 外边距，请添加 <code>is-fluid</code> 修饰符：</p>
+  </div>
+</div>
+</section>
+
+<div class="bd-example is-fullwidth">
+  {{container_fluid_example}}
+</div>
+
+{% highlight html %}{{container_fluid_example}}{% endhighlight %}
+
+<section class="section">
+<div class="container">
+  <h3 class="title is-4">断点容器</h3>
+  <div class="content">
+    <p>
+        你可以添加 <code>.is-widescreen</code> 和 <code>.is-fullhd</code> 两个修饰符，在断点之前获得 <em>全宽</em> 的容器。
+    </p>
+  </div>
+</div>
+</section>
+
+<div class="bd-example is-fullwidth">
+  {{container_widescreen_example}}
+</div>
+
+{% highlight html %}{{container_widescreen_example}}{% endhighlight %}
+
+<div class="bd-example is-fullwidth">
+  {{container_fullhd_example}}
+</div>
+
+{% highlight html %}{{container_fullhd_example}}{% endhighlight %}

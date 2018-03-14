@@ -1,0 +1,85 @@
+---
+title: Checkbox
+layout: documentation
+doc-tab: form
+doc-subtab: checkbox
+---
+
+{% capture checkbox_example %}
+<label class="checkbox">
+  <input type="checkbox">
+  Remember me
+</label>
+{% endcapture %}
+
+{% capture checkbox_link_example %}
+<label class="checkbox">
+  <input type="checkbox">
+  I agree to the <a href="#">terms and conditions</a>
+</label>
+{% endcapture %}
+
+{% capture checkbox_disabled_example %}
+<label class="checkbox" disabled>
+  <input type="checkbox" disabled>
+  Save my preferences
+</label>
+{% endcapture %}
+
+{% include subnav-form.html %}
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">Checkbox</h1>
+    <h2 class="subtitle">
+        原生格式的 <strong>复选框</strong>
+    </h2>
+    {%
+      include meta.html
+      colors=false
+      sizes=false
+      variables=false
+    %}
+
+    <hr>
+
+    <div class="content">
+      <p>
+          <code>checkbox</code> 类是 HTML 元素 <code>&lt;input type="checkbox"&gt;</code> 的简单包装，它故意没有增加样式，以保证跨浏览器的兼容性和用户体验。
+      </p>
+    </div>
+
+    <div class="columns">
+      <div class="column is-half">
+        {{checkbox_example}}
+      </div>
+      <div class="column is-half highlight-full">
+        {% highlight html %}{{checkbox_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    <div class="content">
+      <p>
+          你可以添加 <strong>链接</strong> 到你的复选框，或者 <strong>禁用</strong> 它。
+      </p>
+    </div>
+
+    <div class="columns">
+      <div class="column is-half">
+        {{checkbox_link_example}}
+      </div>
+      <div class="column is-half highlight-full">
+        {% highlight html %}{{checkbox_link_example}}{% endhighlight %}
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column is-half">
+        {{checkbox_disabled_example}}
+      </div>
+      <div class="column is-half highlight-full">
+        {% highlight html %}{{checkbox_disabled_example}}{% endhighlight %}
+      </div>
+    </div>
+  </div>
+</section>

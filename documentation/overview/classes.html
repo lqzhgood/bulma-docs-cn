@@ -1,0 +1,38 @@
+---
+title: CSS 类
+layout: documentation
+doc-tab: overview
+doc-subtab: classes
+---
+
+{% include subnav-overview.html %}
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">类</h1>
+    <h2 class="subtitle">Bulma 是一个 CSS 类的简单 <strong>集合</strong>。只需要编写你想要的 HTML 代码。</h2>
+
+    <hr>
+
+    <div class="content">
+      <p>
+          Bulma 是一个 <strong>CSS</strong> 框架，这意味着最终只有 <strong>一个</strong> <code>.css</code> 文件。
+        <br>
+        <a href="https://github.com/jgthms/bulma/blob/master/css/bulma.css">https://github.com/jgthms/bulma/blob/master/css/bulma.css</a></p>
+      <p>
+          因为 Bulma 只包含 CSS 类，所以您编写的 HTML 代码 <strong>不会影响</strong> 页面的样式。这就是为什么 <code>.input</code> 作为一个类存在的原因，所以你可以选择 <em>你想要的</em>  <code>&lt;input type="text"&gt;</code> 元素样式。
+      </p>
+      <p>
+          Bulma 针对 <strong>通用</strong> 标签仅修改以下 <strong>两处</strong> 
+      </p>
+      <ul>
+        <li>
+          <a href="https://github.com/jgthms/bulma/blob/master/sass/base/generic.sass"><code>generic.sass</code></a> 定义页面的基本样式
+        </li>
+        <li>
+          the <a href="{{ site.url }}/documentation/elements/content/"><code>.content</code> 类 </a> 用于 <em>任何</em> 文本内容, 例如 WYSIWYG
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

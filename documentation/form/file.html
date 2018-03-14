@@ -1,0 +1,779 @@
+---
+title: File upload
+layout: documentation
+doc-tab: form
+doc-subtab: file
+file_name: "Screen Shot 2017-07-29 at 15.54.25.png"
+variables_keys:
+- file-border-color
+- file-radius
+- file-cta-background-color
+- file-cta-color
+- file-cta-hover-color
+- file-cta-active-color
+- file-name-border-color
+- file-name-border-style
+- file-name-border-width
+- file-name-max-width
+---
+
+{% capture file %}
+<div class="file">
+  <label class="file-label">
+    <input class="file-input" type="file" name="resume">
+    <span class="file-cta">
+      <span class="file-icon">
+        <i class="fas fa-upload"></i>
+      </span>
+      <span class="file-label">
+        Choose a file…
+      </span>
+    </span>
+  </label>
+</div>
+{% endcapture %}
+
+{% capture file_name %}
+<div class="file has-name">
+  <label class="file-label">
+    <input class="file-input" type="file" name="resume">
+    <span class="file-cta">
+      <span class="file-icon">
+        <i class="fas fa-upload"></i>
+      </span>
+      <span class="file-label">
+        Choose a file…
+      </span>
+    </span>
+    <span class="file-name">
+      {{ page.file_name }}
+    </span>
+  </label>
+</div>
+{% endcapture %}
+
+{% capture file_name_right %}
+<div class="file has-name is-right">
+  <label class="file-label">
+    <input class="file-input" type="file" name="resume">
+    <span class="file-cta">
+      <span class="file-icon">
+        <i class="fas fa-upload"></i>
+      </span>
+      <span class="file-label">
+        Choose a file…
+      </span>
+    </span>
+    <span class="file-name">
+      {{ page.file_name }}
+    </span>
+  </label>
+</div>
+{% endcapture %}
+
+{% capture file_name_fullwidth %}
+<div class="file has-name is-fullwidth">
+  <label class="file-label">
+    <input class="file-input" type="file" name="resume">
+    <span class="file-cta">
+      <span class="file-icon">
+        <i class="fas fa-upload"></i>
+      </span>
+      <span class="file-label">
+        Choose a file…
+      </span>
+    </span>
+    <span class="file-name">
+      {{ page.file_name }}
+    </span>
+  </label>
+</div>
+{% endcapture %}
+
+{% capture file_boxed %}
+<div class="file is-boxed">
+  <label class="file-label">
+    <input class="file-input" type="file" name="resume">
+    <span class="file-cta">
+      <span class="file-icon">
+        <i class="fas fa-upload"></i>
+      </span>
+      <span class="file-label">
+        Choose a file…
+      </span>
+    </span>
+  </label>
+</div>
+{% endcapture %}
+
+{% capture file_boxed_name %}
+<div class="file has-name is-boxed">
+  <label class="file-label">
+    <input class="file-input" type="file" name="resume">
+    <span class="file-cta">
+      <span class="file-icon">
+        <i class="fas fa-upload"></i>
+      </span>
+      <span class="file-label">
+        Choose a file…
+      </span>
+    </span>
+    <span class="file-name">
+      {{ page.file_name }}
+    </span>
+  </label>
+</div>
+{% endcapture %}
+
+{% capture file_colors %}
+<div class="field">
+  <div class="file is-primary">
+    <label class="file-label">
+      <input class="file-input" type="file" name="resume">
+      <span class="file-cta">
+        <span class="file-icon">
+          <i class="fas fa-upload"></i>
+        </span>
+        <span class="file-label">
+          Primary file…
+        </span>
+      </span>
+    </label>
+  </div>
+</div>
+
+<div class="field">
+  <div class="file is-info has-name">
+    <label class="file-label">
+      <input class="file-input" type="file" name="resume">
+      <span class="file-cta">
+        <span class="file-icon">
+          <i class="fas fa-upload"></i>
+        </span>
+        <span class="file-label">
+          Info file…
+        </span>
+      </span>
+      <span class="file-name">
+        {{ page.file_name }}
+      </span>
+    </label>
+  </div>
+</div>
+
+<div class="field">
+  <div class="file is-warning is-boxed">
+    <label class="file-label">
+      <input class="file-input" type="file" name="resume">
+      <span class="file-cta">
+        <span class="file-icon">
+          <i class="fas fa-cloud-upload-alt"></i>
+        </span>
+        <span class="file-label">
+          Warning file…
+        </span>
+      </span>
+    </label>
+  </div>
+</div>
+
+<div class="field">
+  <div class="file is-danger has-name is-boxed">
+    <label class="file-label">
+      <input class="file-input" type="file" name="resume">
+      <span class="file-cta">
+        <span class="file-icon">
+          <i class="fas fa-cloud-upload-alt"></i>
+        </span>
+        <span class="file-label">
+          Danger file…
+        </span>
+      </span>
+      <span class="file-name">
+        {{ page.file_name }}
+      </span>
+    </label>
+  </div>
+</div>
+{% endcapture %}
+
+{% capture file_sizes %}
+<div class="field">
+  <div class="file is-small">
+    <label class="file-label">
+      <input class="file-input" type="file" name="resume">
+      <span class="file-cta">
+        <span class="file-icon">
+          <i class="fas fa-upload"></i>
+        </span>
+        <span class="file-label">
+          Small file…
+        </span>
+      </span>
+    </label>
+  </div>
+</div>
+
+<div class="field">
+  <div class="file">
+    <label class="file-label">
+      <input class="file-input" type="file" name="resume">
+      <span class="file-cta">
+        <span class="file-icon">
+          <i class="fas fa-upload"></i>
+        </span>
+        <span class="file-label">
+          Normal file…
+        </span>
+      </span>
+    </label>
+  </div>
+</div>
+
+<div class="field">
+  <div class="file is-medium">
+    <label class="file-label">
+      <input class="file-input" type="file" name="resume">
+      <span class="file-cta">
+        <span class="file-icon">
+          <i class="fas fa-upload"></i>
+        </span>
+        <span class="file-label">
+          Medium file…
+        </span>
+      </span>
+    </label>
+  </div>
+</div>
+
+<div class="field">
+  <div class="file is-large">
+    <label class="file-label">
+      <input class="file-input" type="file" name="resume">
+      <span class="file-cta">
+        <span class="file-icon">
+          <i class="fas fa-upload"></i>
+        </span>
+        <span class="file-label">
+          Large file…
+        </span>
+      </span>
+    </label>
+  </div>
+</div>
+{% endcapture %}
+
+{% capture file_sizes_name %}
+<div class="field">
+  <div class="file is-small has-name">
+    <label class="file-label">
+      <input class="file-input" type="file" name="resume">
+      <span class="file-cta">
+        <span class="file-icon">
+          <i class="fas fa-upload"></i>
+        </span>
+        <span class="file-label">
+          Small file…
+        </span>
+      </span>
+      <span class="file-name">
+        {{ page.file_name }}
+      </span>
+    </label>
+  </div>
+</div>
+
+<div class="field">
+  <div class="file has-name">
+    <label class="file-label">
+      <input class="file-input" type="file" name="resume">
+      <span class="file-cta">
+        <span class="file-icon">
+          <i class="fas fa-upload"></i>
+        </span>
+        <span class="file-label">
+          Normal file…
+        </span>
+      </span>
+      <span class="file-name">
+        {{ page.file_name }}
+      </span>
+    </label>
+  </div>
+</div>
+
+<div class="field">
+  <div class="file is-medium has-name">
+    <label class="file-label">
+      <input class="file-input" type="file" name="resume">
+      <span class="file-cta">
+        <span class="file-icon">
+          <i class="fas fa-upload"></i>
+        </span>
+        <span class="file-label">
+          Medium file…
+        </span>
+      </span>
+      <span class="file-name">
+        {{ page.file_name }}
+      </span>
+    </label>
+  </div>
+</div>
+
+<div class="field">
+  <div class="file is-large has-name">
+    <label class="file-label">
+      <input class="file-input" type="file" name="resume">
+      <span class="file-cta">
+        <span class="file-icon">
+          <i class="fas fa-upload"></i>
+        </span>
+        <span class="file-label">
+          Large file…
+        </span>
+      </span>
+      <span class="file-name">
+        {{ page.file_name }}
+      </span>
+    </label>
+  </div>
+</div>
+{% endcapture %}
+
+{% capture file_sizes_boxed %}
+<div class="field">
+  <div class="file is-small is-boxed">
+    <label class="file-label">
+      <input class="file-input" type="file" name="resume">
+      <span class="file-cta">
+        <span class="file-icon">
+          <i class="fas fa-upload"></i>
+        </span>
+        <span class="file-label">
+          Small file…
+        </span>
+      </span>
+    </label>
+  </div>
+</div>
+
+<div class="field">
+  <div class="file is-boxed">
+    <label class="file-label">
+      <input class="file-input" type="file" name="resume">
+      <span class="file-cta">
+        <span class="file-icon">
+          <i class="fas fa-upload"></i>
+        </span>
+        <span class="file-label">
+          Normal file…
+        </span>
+      </span>
+    </label>
+  </div>
+</div>
+
+<div class="field">
+  <div class="file is-medium is-boxed">
+    <label class="file-label">
+      <input class="file-input" type="file" name="resume">
+      <span class="file-cta">
+        <span class="file-icon">
+          <i class="fas fa-upload"></i>
+        </span>
+        <span class="file-label">
+          Medium file…
+        </span>
+      </span>
+    </label>
+  </div>
+</div>
+
+<div class="field">
+  <div class="file is-large is-boxed">
+    <label class="file-label">
+      <input class="file-input" type="file" name="resume">
+      <span class="file-cta">
+        <span class="file-icon">
+          <i class="fas fa-upload"></i>
+        </span>
+        <span class="file-label">
+          Large file…
+        </span>
+      </span>
+    </label>
+  </div>
+</div>
+{% endcapture %}
+
+{% capture file_centered %}
+<div class="field">
+  <div class="file is-centered is-boxed is-success has-name">
+    <label class="file-label">
+      <input class="file-input" type="file" name="resume">
+      <span class="file-cta">
+        <span class="file-icon">
+          <i class="fas fa-upload"></i>
+        </span>
+        <span class="file-label">
+          Centered file…
+        </span>
+      </span>
+      <span class="file-name">
+        {{ page.file_name }}
+      </span>
+    </label>
+  </div>
+</div>
+{% endcapture %}
+
+{% capture file_right %}
+<div class="field">
+  <div class="file is-right is-info">
+    <label class="file-label">
+      <input class="file-input" type="file" name="resume">
+      <span class="file-cta">
+        <span class="file-icon">
+          <i class="fas fa-upload"></i>
+        </span>
+        <span class="file-label">
+          Right file…
+        </span>
+      </span>
+      <span class="file-name">
+        {{ page.file_name }}
+      </span>
+    </label>
+  </div>
+</div>
+{% endcapture %}
+
+{% capture file_sizes_boxed_name %}
+<div class="field">
+  <div class="file is-small is-boxed has-name">
+    <label class="file-label">
+      <input class="file-input" type="file" name="resume">
+      <span class="file-cta">
+        <span class="file-icon">
+          <i class="fas fa-upload"></i>
+        </span>
+        <span class="file-label">
+          Small file…
+        </span>
+      </span>
+      <span class="file-name">
+        {{ page.file_name }}
+      </span>
+    </label>
+  </div>
+</div>
+
+<div class="field">
+  <div class="file is-boxed has-name">
+    <label class="file-label">
+      <input class="file-input" type="file" name="resume">
+      <span class="file-cta">
+        <span class="file-icon">
+          <i class="fas fa-upload"></i>
+        </span>
+        <span class="file-label">
+          Normal file…
+        </span>
+      </span>
+      <span class="file-name">
+        {{ page.file_name }}
+      </span>
+    </label>
+  </div>
+</div>
+
+<div class="field">
+  <div class="file is-medium is-boxed has-name">
+    <label class="file-label">
+      <input class="file-input" type="file" name="resume">
+      <span class="file-cta">
+        <span class="file-icon">
+          <i class="fas fa-upload"></i>
+        </span>
+        <span class="file-label">
+          Medium file…
+        </span>
+      </span>
+      <span class="file-name">
+        {{ page.file_name }}
+      </span>
+    </label>
+  </div>
+</div>
+
+<div class="field">
+  <div class="file is-large is-boxed has-name">
+    <label class="file-label">
+      <input class="file-input" type="file" name="resume">
+      <span class="file-cta">
+        <span class="file-icon">
+          <i class="fas fa-upload"></i>
+        </span>
+        <span class="file-label">
+          Large file…
+        </span>
+      </span>
+      <span class="file-name">
+        {{ page.file_name }}
+      </span>
+    </label>
+  </div>
+</div>
+{% endcapture %}
+
+{% include subnav-form.html %}
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">File upload</h1>
+    <h2 class="subtitle">
+     一个自定义的 <strong>文件上传</strong> 组件， 没有使用 JavaScript。
+    </h2>
+    {%
+      include meta.html
+      experimental=true
+      since="0.5.1"
+      colors=true
+      sizes=true
+      variables=true
+    %}
+
+    <hr>
+
+    <div class="content">
+      <p>
+          <code>.file</code> 元素是一个包裹着 <code>&lt;input type="file"&gt;</code> 的简单可交互组件。它包含几个子元素：
+      </p>
+      <ul>
+        <li>
+          <code>.file</code> 主要 <strong>容器</strong>
+          <ul>
+            <li>
+              <code>.file-label</code> 元素实际 <strong>可交互</strong> 和可点击的部分
+              <ul>
+                <li>
+                  <code>.file-input</code>  <strong>原生</strong> 文件输入组件, 使用隐藏样式
+                </li>
+                <li>
+                  <code>.file-cta</code> <strong>触发</strong> 上传 - CTA
+                  <ul>
+                    <li>
+                      <code>.file-icon</code> 一个可选的 <strong>上传</strong> 图标
+                    </li>
+                    <li>
+                      <code>.file-label</code> "Choose a file…" 文本
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <code>.file-name</code> <strong>所选文件</strong> 名称的容器
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    {% include snippet.html content=file %}
+
+    {% include anchor.html name="Modifiers | 修饰符" %}
+
+    <div class="columns">
+      <div class="column">
+        <div class="content">
+          <p>
+              通过 <code>.has-name</code> 修饰符和 <code>.file-name</code> 元素结合使用，可以为文件名添加 <strong>占位符</strong>。
+          </p>
+        </div>
+        <div class="bd-example">
+          {{ file_name }}
+        </div>
+      </div>
+      <div class="column highlight-full">
+        {% highlight html %}{{ file_name }}{% endhighlight %}
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column">
+        <div class="content">
+          <p>
+              您也可以通过添加 <code>.is-right</code> 修饰符将 CTA 移动到 <strong>右侧</strong>。
+          </p>
+        </div>
+        <div class="bd-example">
+          {{ file_name_right }}
+        </div>
+      </div>
+      <div class="column highlight-full">
+        {% highlight html %}{{ file_name_right }}{% endhighlight %}
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column">
+        <div class="content">
+          <p>
+              您还可以使用 <code>.is-fullwidth</code> 修饰符扩展名称框 <strong>填充</strong> 剩余空间。
+          </p>
+        </div>
+        <div class="bd-example">
+          {{ file_name_fullwidth }}
+        </div>
+      </div>
+      <div class="column highlight-full">
+        {% highlight html %}{{ file_name_fullwidth }}{% endhighlight %}
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column">
+        <div class="content">
+          <p>
+              您还可以通过添加 <code>.is-boxed</code> 修饰符将图标变为 <strong>块状</strong>
+          </p>
+        </div>
+        <div class="bd-example">
+          {{ file_boxed }}
+        </div>
+      </div>
+      <div class="column highlight-full">
+        {% highlight html %}{{ file_boxed }}{% endhighlight %}
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column">
+        <div class="content">
+          <p>
+              您可以 <strong>一起</strong> 使用 <code>.has-name</code> 和 <code>.is-boxed</code>。
+          </p>
+        </div>
+        <div class="bd-example">
+          {{ file_boxed_name }}
+        </div>
+      </div>
+      <div class="column highlight-full">
+        {% highlight html %}{{ file_boxed_name }}{% endhighlight %}
+      </div>
+    </div>
+
+    {% include anchor.html name="Colors | 颜色" %}
+
+    <div class="content">
+      <p>
+          您可以添加 <strong>{{ site.data.colors.derived | size }} 种颜色修饰符</strong> 来改变元素样式：
+      </p>
+      <ul>
+        {% for color in site.data.colors.derived %}
+          <li>
+            <code>is-{{ color.id }}</code>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    {% include snippet.html content=file_colors clipped=true %}
+
+    {% include anchor.html name="Sizes | 尺寸" %}
+
+    <div class="content">
+      <p>
+        你可以使用 <strong>3 种尺寸</strong> 中的一种:
+      </p>
+      <ul>
+        <li>
+          <code>.is-small</code>
+        </li>
+        <li>
+          <code>.is-medium</code>
+        </li>
+        <li>
+          <code>.is-large</code>
+        </li>
+      </ul>
+    </div>
+
+    {% include snippet.html content=file_sizes clipped=true %}
+
+    {% include snippet.html content=file_sizes_name clipped=true %}
+
+    {% include snippet.html content=file_sizes_boxed clipped=true %}
+
+    {% include snippet.html content=file_sizes_boxed_name clipped=true %}
+
+    {% include anchor.html name="Alignment | 对齐" %}
+
+    <div class="content">
+      <p>
+        您可以 <strong>对齐</strong> 文件选择组件：
+      </p>
+      <ul>
+        <li>
+         <code>is-centered</code> 修饰符将会 <strong>居中</strong>
+        </li>
+        <li>
+         <code>is-right</code> 修饰符将会 <strong>右对齐</strong>
+        </li>
+      </ul>
+    </div>
+
+    {% include snippet.html content=file_centered %}
+
+    {% include snippet.html content=file_right %}
+
+    {% include anchor.html name="JavaScript" %}
+
+    <div class="content">
+      <p>
+          文件上传组件需要使用 JavaScript 来 <strong>获得</strong> <strong>所选文件的名称</strong> 。
+        <br>
+        <a href="https://github.com/chintanbanugaria"><strong>@chintanbanugaria</strong></a>在 Github 上提供了一个简单的解决方案。<a href="https://jsfiddle.net/chintanbanugaria/uzva5byy/">在 JSFiddle 上查看</a>。
+      </p>
+    </div>
+
+    {% include anchor.html name="Variables | 变量" %}
+
+    <div class="content">
+      <p>
+          您可以使用 <a href="{{ site.github | append: '/blob/master/sass/elements/form.sass#L25,L36' }}" target="_blank">这些变量</a> 来 <strong>自定义</strong> 这个元素，只需要在导入 Bulma <em>之前</em> 设置这些变量。<a href="{{ site.url }}/documentation/overview/customize/">学习如何开始</a>。
+      </p>
+    </div>
+
+    <table class="table is-bordered">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Default value</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <th>Name</th>
+          <th>Default value</th>
+        </tr>
+      </tfoot>
+      <tbody>
+        {% for key in page.variables_keys %}
+          {% assign variable = site.data.variables.elements.form.vars[key] %}
+          <tr>
+            <td>
+              <code>{{ variable.name }}</code>
+            </td>
+            <td>
+              <code>{{ variable.value }}</code>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+  </div>
+</section>

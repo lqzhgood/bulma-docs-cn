@@ -1,0 +1,72 @@
+---
+title: Box
+layout: documentation
+doc-tab: elements
+doc-subtab: box
+---
+
+{% include subnav-elements.html %}
+
+{% capture box_example %}
+<div class="box">
+  <article class="media">
+    <div class="media-left">
+      <figure class="image is-64x64">
+        <img src="{{site.url}}/images/placeholders/128x128.png" alt="Image">
+      </figure>
+    </div>
+    <div class="media-content">
+      <div class="content">
+        <p>
+          <strong>John Smith</strong> <small>@johnsmith</small> <small>31m</small>
+          <br>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur sit amet massa fringilla egestas. Nullam condimentum luctus turpis.
+        </p>
+      </div>
+      <nav class="level is-mobile">
+        <div class="level-left">
+          <a class="level-item">
+            <span class="icon is-small"><i class="fas fa-reply"></i></span>
+          </a>
+          <a class="level-item">
+            <span class="icon is-small"><i class="fas fa-retweet"></i></span>
+          </a>
+          <a class="level-item">
+            <span class="icon is-small"><i class="fas fa-heart"></i></span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </article>
+</div>
+{% endcapture %}
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">Box</h1>
+    <h2 class="subtitle">
+        一个用来包裹其他元素的白色 <strong>盒子</strong>
+    </h2>
+    {%
+      include meta.html
+      colors=false
+      sizes=false
+      variables=true
+    %}
+
+    <hr>
+
+    <div class="content">
+      <p>
+          <code>.box</code> 元素是一个带有阴影、边框、圆角和一些边距的容器。
+        <br>
+        例如，您可以包含媒体对象。
+      </p>
+    </div>
+
+    {% include snippet.html content=box_example more=true %}
+
+    {% include variables.html type='element' %}
+
+  </div>
+</section>

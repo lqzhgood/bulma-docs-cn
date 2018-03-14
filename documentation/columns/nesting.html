@@ -1,0 +1,79 @@
+---
+title: 列嵌套
+layout: documentation
+doc-tab: columns
+doc-subtab: nesting
+---
+
+{% include subnav-columns.html %}
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">列嵌套</h1>
+    <h2 class="subtitle">通过一个简单方式创建 <strong>响应式的多列</strong></h2>
+    <hr>
+
+    <div class="content">
+      <p>
+          你只要遵循以下结构，就可以在你的设计中灵活的<strong>嵌套</strong>
+      </p>
+      <ul>
+        <li>
+          <code>columns</code>:顶层列
+          <ul>
+            <li>
+              <code>column</code>
+              <ul>
+                <li>
+                  <code>columns</code>: 嵌套列
+                  <ul>
+                    <li>
+                      <code>column</code> 更多...
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <p>
+         和 <a href="http://192.168.21.11:4000/documentation/columns/options/#multiline"><code>.is-multiline</code></a> 所产生多行列的区别在于 HTML 代码显示的位置，缩小窗口后，所有<strong class="has-text-info">蓝色</strong>列将显示在<strong class="has-text-danger">红色</strong>列<em>上方</em>。
+      </p>
+    </div>
+
+    <div class="columns">
+      <div class="column">
+        <p class="bd-notification is-info">第一列</p>
+        <div class="columns is-mobile">
+          <div class="column">
+            <p class="bd-notification is-info">第一个嵌套</p>
+          </div>
+          <div class="column">
+            <p class="bd-notification is-info">第二个嵌套</p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <p class="bd-notification is-danger">第二列</p>
+        <div class="columns is-mobile">
+          <div class="column is-half">
+            <p class="bd-notification is-danger">50%</p>
+          </div>
+          <div class="column">
+            <p class="bd-notification is-danger">Auto</p>
+          </div>
+          <div class="column">
+            <p class="bd-notification is-danger">Auto</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+      <p>
+          对于<code>.is-multiline</code>的多行列，每<strong>行间</strong>会产生<strong>间距</strong>
+      </p>
+    </div>
+  </div>
+</section>
