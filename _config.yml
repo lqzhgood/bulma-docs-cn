@@ -13,7 +13,7 @@ exclude:       ['icons', 'node_modules', 'templates', '.babelrc', 'bulma-docs.sa
 
 # Variables
 
-documentation: "/documentation/overview/start/"
+documentation: "https://lqzhgood.github.io/bulma-docs-cn/documentation/overview/start/"
 download:      https://github.com/jgthms/bulma/releases/download/0.6.2/bulma-0.6.2.zip
 github:        https://github.com/jgthms/bulma
 twitter:       https://twitter.com/jgthms
