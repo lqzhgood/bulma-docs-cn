@@ -1,5 +1,5 @@
 ## 这是 Bulma 的中文翻译。可以通过以下链接访问
-https://lqzhgood.github.io/bulma-docs-cn
+http://lqzhgood.github.io/bulma-docs-cn
 
 欢迎提交 Issues 改进。
 
