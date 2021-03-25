@@ -1,8 +1,8 @@
 ##############################################################
 
 
-感谢 @vmlite  https://v2ex.com/member/vmlite 翻译 v0.8 <br/>
-可以访问 https://bulma.comptechs.cn/ 查看
+感谢 @vmlite  https://v2ex.com/member/vmlite 翻译 v0.9 <br/>
+可以访问 https://bulma.zcopy.site 查看
 
 
 
